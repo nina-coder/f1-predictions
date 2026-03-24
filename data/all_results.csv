@@ -1181,3 +1181,263 @@ DriverNumber,FullName,TeamName,Position,GridPosition,Points,Status,Year,Round,Ra
 1,Lando Norris,McLaren,20.0,6.0,0.0,Did not start,2026,2,Chinese Grand Prix,Shanghai
 5,Gabriel Bortoleto,Audi,21.0,16.0,0.0,Did not start,2026,2,Chinese Grand Prix,Shanghai
 23,Alexander Albon,Williams,22.0,22.0,0.0,Did not start,2026,2,Chinese Grand Prix,Shanghai
+4,Lando Norris,McLaren,1.0,3.0,25.0,Finished,2025,12,British Grand Prix,Silverstone
+81,Oscar Piastri,McLaren,2.0,2.0,18.0,Finished,2025,12,British Grand Prix,Silverstone
+27,Nico Hulkenberg,Kick Sauber,3.0,19.0,15.0,Finished,2025,12,British Grand Prix,Silverstone
+44,Lewis Hamilton,Ferrari,4.0,5.0,12.0,Finished,2025,12,British Grand Prix,Silverstone
+1,Max Verstappen,Red Bull Racing,5.0,1.0,10.0,Finished,2025,12,British Grand Prix,Silverstone
+10,Pierre Gasly,Alpine,6.0,8.0,8.0,Finished,2025,12,British Grand Prix,Silverstone
+18,Lance Stroll,Aston Martin,7.0,17.0,6.0,Finished,2025,12,British Grand Prix,Silverstone
+23,Alexander Albon,Williams,8.0,13.0,4.0,Finished,2025,12,British Grand Prix,Silverstone
+14,Fernando Alonso,Aston Martin,9.0,7.0,2.0,Finished,2025,12,British Grand Prix,Silverstone
+63,George Russell,Mercedes,10.0,4.0,1.0,Finished,2025,12,British Grand Prix,Silverstone
+87,Oliver Bearman,Haas F1 Team,11.0,18.0,0.0,Finished,2025,12,British Grand Prix,Silverstone
+55,Carlos Sainz,Williams,12.0,9.0,0.0,Finished,2025,12,British Grand Prix,Silverstone
+31,Esteban Ocon,Haas F1 Team,13.0,14.0,0.0,Finished,2025,12,British Grand Prix,Silverstone
+16,Charles Leclerc,Ferrari,14.0,6.0,0.0,Finished,2025,12,British Grand Prix,Silverstone
+22,Yuki Tsunoda,Red Bull Racing,15.0,11.0,0.0,Lapped,2025,12,British Grand Prix,Silverstone
+12,Kimi Antonelli,Mercedes,16.0,10.0,0.0,Retired,2025,12,British Grand Prix,Silverstone
+6,Isack Hadjar,Racing Bulls,17.0,12.0,0.0,Retired,2025,12,British Grand Prix,Silverstone
+5,Gabriel Bortoleto,Kick Sauber,18.0,16.0,0.0,Retired,2025,12,British Grand Prix,Silverstone
+30,Liam Lawson,Racing Bulls,19.0,15.0,0.0,Retired,2025,12,British Grand Prix,Silverstone
+43,Franco Colapinto,Alpine,20.0,20.0,0.0,Did not start,2025,12,British Grand Prix,Silverstone
+81,Oscar Piastri,McLaren,1.0,2.0,25.0,Finished,2025,13,Belgian Grand Prix,Spa-Francorchamps
+4,Lando Norris,McLaren,2.0,1.0,18.0,Finished,2025,13,Belgian Grand Prix,Spa-Francorchamps
+16,Charles Leclerc,Ferrari,3.0,3.0,15.0,Finished,2025,13,Belgian Grand Prix,Spa-Francorchamps
+1,Max Verstappen,Red Bull Racing,4.0,4.0,12.0,Finished,2025,13,Belgian Grand Prix,Spa-Francorchamps
+63,George Russell,Mercedes,5.0,6.0,10.0,Finished,2025,13,Belgian Grand Prix,Spa-Francorchamps
+23,Alexander Albon,Williams,6.0,5.0,8.0,Finished,2025,13,Belgian Grand Prix,Spa-Francorchamps
+44,Lewis Hamilton,Ferrari,7.0,18.0,6.0,Finished,2025,13,Belgian Grand Prix,Spa-Francorchamps
+30,Liam Lawson,Racing Bulls,8.0,9.0,4.0,Finished,2025,13,Belgian Grand Prix,Spa-Francorchamps
+5,Gabriel Bortoleto,Kick Sauber,9.0,10.0,2.0,Finished,2025,13,Belgian Grand Prix,Spa-Francorchamps
+10,Pierre Gasly,Alpine,10.0,13.0,1.0,Finished,2025,13,Belgian Grand Prix,Spa-Francorchamps
+87,Oliver Bearman,Haas F1 Team,11.0,12.0,0.0,Finished,2025,13,Belgian Grand Prix,Spa-Francorchamps
+27,Nico Hulkenberg,Kick Sauber,12.0,14.0,0.0,Finished,2025,13,Belgian Grand Prix,Spa-Francorchamps
+22,Yuki Tsunoda,Red Bull Racing,13.0,7.0,0.0,Finished,2025,13,Belgian Grand Prix,Spa-Francorchamps
+18,Lance Stroll,Aston Martin,14.0,16.0,0.0,Finished,2025,13,Belgian Grand Prix,Spa-Francorchamps
+31,Esteban Ocon,Haas F1 Team,15.0,11.0,0.0,Finished,2025,13,Belgian Grand Prix,Spa-Francorchamps
+12,Kimi Antonelli,Mercedes,16.0,19.0,0.0,Finished,2025,13,Belgian Grand Prix,Spa-Francorchamps
+14,Fernando Alonso,Aston Martin,17.0,20.0,0.0,Finished,2025,13,Belgian Grand Prix,Spa-Francorchamps
+55,Carlos Sainz,Williams,18.0,17.0,0.0,Finished,2025,13,Belgian Grand Prix,Spa-Francorchamps
+43,Franco Colapinto,Alpine,19.0,15.0,0.0,Finished,2025,13,Belgian Grand Prix,Spa-Francorchamps
+6,Isack Hadjar,Racing Bulls,20.0,8.0,0.0,Lapped,2025,13,Belgian Grand Prix,Spa-Francorchamps
+4,Lando Norris,McLaren,1.0,3.0,25.0,Finished,2025,14,Hungarian Grand Prix,Budapest
+81,Oscar Piastri,McLaren,2.0,2.0,18.0,Finished,2025,14,Hungarian Grand Prix,Budapest
+63,George Russell,Mercedes,3.0,4.0,15.0,Finished,2025,14,Hungarian Grand Prix,Budapest
+16,Charles Leclerc,Ferrari,4.0,1.0,12.0,Finished,2025,14,Hungarian Grand Prix,Budapest
+14,Fernando Alonso,Aston Martin,5.0,5.0,10.0,Finished,2025,14,Hungarian Grand Prix,Budapest
+5,Gabriel Bortoleto,Kick Sauber,6.0,7.0,8.0,Finished,2025,14,Hungarian Grand Prix,Budapest
+18,Lance Stroll,Aston Martin,7.0,6.0,6.0,Finished,2025,14,Hungarian Grand Prix,Budapest
+30,Liam Lawson,Racing Bulls,8.0,9.0,4.0,Finished,2025,14,Hungarian Grand Prix,Budapest
+1,Max Verstappen,Red Bull Racing,9.0,8.0,2.0,Finished,2025,14,Hungarian Grand Prix,Budapest
+12,Kimi Antonelli,Mercedes,10.0,15.0,1.0,Lapped,2025,14,Hungarian Grand Prix,Budapest
+6,Isack Hadjar,Racing Bulls,11.0,10.0,0.0,Lapped,2025,14,Hungarian Grand Prix,Budapest
+44,Lewis Hamilton,Ferrari,12.0,12.0,0.0,Lapped,2025,14,Hungarian Grand Prix,Budapest
+27,Nico Hulkenberg,Kick Sauber,13.0,18.0,0.0,Lapped,2025,14,Hungarian Grand Prix,Budapest
+55,Carlos Sainz,Williams,14.0,13.0,0.0,Lapped,2025,14,Hungarian Grand Prix,Budapest
+23,Alexander Albon,Williams,15.0,19.0,0.0,Lapped,2025,14,Hungarian Grand Prix,Budapest
+31,Esteban Ocon,Haas F1 Team,16.0,17.0,0.0,Lapped,2025,14,Hungarian Grand Prix,Budapest
+22,Yuki Tsunoda,Red Bull Racing,17.0,20.0,0.0,Lapped,2025,14,Hungarian Grand Prix,Budapest
+43,Franco Colapinto,Alpine,18.0,14.0,0.0,Lapped,2025,14,Hungarian Grand Prix,Budapest
+10,Pierre Gasly,Alpine,19.0,16.0,0.0,Lapped,2025,14,Hungarian Grand Prix,Budapest
+87,Oliver Bearman,Haas F1 Team,20.0,11.0,0.0,Retired,2025,14,Hungarian Grand Prix,Budapest
+81,Oscar Piastri,McLaren,1.0,1.0,25.0,Finished,2025,15,Dutch Grand Prix,Zandvoort
+1,Max Verstappen,Red Bull Racing,2.0,3.0,18.0,Finished,2025,15,Dutch Grand Prix,Zandvoort
+6,Isack Hadjar,Racing Bulls,3.0,4.0,15.0,Finished,2025,15,Dutch Grand Prix,Zandvoort
+63,George Russell,Mercedes,4.0,5.0,12.0,Finished,2025,15,Dutch Grand Prix,Zandvoort
+23,Alexander Albon,Williams,5.0,15.0,10.0,Finished,2025,15,Dutch Grand Prix,Zandvoort
+87,Oliver Bearman,Haas F1 Team,6.0,20.0,8.0,Finished,2025,15,Dutch Grand Prix,Zandvoort
+18,Lance Stroll,Aston Martin,7.0,19.0,6.0,Finished,2025,15,Dutch Grand Prix,Zandvoort
+14,Fernando Alonso,Aston Martin,8.0,10.0,4.0,Finished,2025,15,Dutch Grand Prix,Zandvoort
+22,Yuki Tsunoda,Red Bull Racing,9.0,12.0,2.0,Finished,2025,15,Dutch Grand Prix,Zandvoort
+31,Esteban Ocon,Haas F1 Team,10.0,18.0,1.0,Finished,2025,15,Dutch Grand Prix,Zandvoort
+43,Franco Colapinto,Alpine,11.0,16.0,0.0,Finished,2025,15,Dutch Grand Prix,Zandvoort
+30,Liam Lawson,Racing Bulls,12.0,8.0,0.0,Finished,2025,15,Dutch Grand Prix,Zandvoort
+55,Carlos Sainz,Williams,13.0,9.0,0.0,Finished,2025,15,Dutch Grand Prix,Zandvoort
+27,Nico Hulkenberg,Kick Sauber,14.0,17.0,0.0,Finished,2025,15,Dutch Grand Prix,Zandvoort
+5,Gabriel Bortoleto,Kick Sauber,15.0,13.0,0.0,Finished,2025,15,Dutch Grand Prix,Zandvoort
+12,Kimi Antonelli,Mercedes,16.0,11.0,0.0,Finished,2025,15,Dutch Grand Prix,Zandvoort
+10,Pierre Gasly,Alpine,17.0,14.0,0.0,Finished,2025,15,Dutch Grand Prix,Zandvoort
+4,Lando Norris,McLaren,18.0,2.0,0.0,Retired,2025,15,Dutch Grand Prix,Zandvoort
+16,Charles Leclerc,Ferrari,19.0,6.0,0.0,Retired,2025,15,Dutch Grand Prix,Zandvoort
+44,Lewis Hamilton,Ferrari,20.0,7.0,0.0,Retired,2025,15,Dutch Grand Prix,Zandvoort
+1,Max Verstappen,Red Bull Racing,1.0,1.0,25.0,Finished,2025,16,Italian Grand Prix,Monza
+4,Lando Norris,McLaren,2.0,2.0,18.0,Finished,2025,16,Italian Grand Prix,Monza
+81,Oscar Piastri,McLaren,3.0,3.0,15.0,Finished,2025,16,Italian Grand Prix,Monza
+16,Charles Leclerc,Ferrari,4.0,4.0,12.0,Finished,2025,16,Italian Grand Prix,Monza
+63,George Russell,Mercedes,5.0,5.0,10.0,Finished,2025,16,Italian Grand Prix,Monza
+44,Lewis Hamilton,Ferrari,6.0,10.0,8.0,Finished,2025,16,Italian Grand Prix,Monza
+23,Alexander Albon,Williams,7.0,14.0,6.0,Finished,2025,16,Italian Grand Prix,Monza
+5,Gabriel Bortoleto,Kick Sauber,8.0,7.0,4.0,Finished,2025,16,Italian Grand Prix,Monza
+12,Kimi Antonelli,Mercedes,9.0,6.0,2.0,Finished,2025,16,Italian Grand Prix,Monza
+6,Isack Hadjar,Racing Bulls,10.0,19.0,1.0,Finished,2025,16,Italian Grand Prix,Monza
+55,Carlos Sainz,Williams,11.0,13.0,0.0,Finished,2025,16,Italian Grand Prix,Monza
+87,Oliver Bearman,Haas F1 Team,12.0,11.0,0.0,Finished,2025,16,Italian Grand Prix,Monza
+22,Yuki Tsunoda,Red Bull Racing,13.0,9.0,0.0,Finished,2025,16,Italian Grand Prix,Monza
+30,Liam Lawson,Racing Bulls,14.0,18.0,0.0,Finished,2025,16,Italian Grand Prix,Monza
+31,Esteban Ocon,Haas F1 Team,15.0,15.0,0.0,Lapped,2025,16,Italian Grand Prix,Monza
+10,Pierre Gasly,Alpine,16.0,20.0,0.0,Lapped,2025,16,Italian Grand Prix,Monza
+43,Franco Colapinto,Alpine,17.0,17.0,0.0,Lapped,2025,16,Italian Grand Prix,Monza
+18,Lance Stroll,Aston Martin,18.0,16.0,0.0,Lapped,2025,16,Italian Grand Prix,Monza
+14,Fernando Alonso,Aston Martin,19.0,8.0,0.0,Retired,2025,16,Italian Grand Prix,Monza
+27,Nico Hulkenberg,Kick Sauber,20.0,12.0,0.0,Did not start,2025,16,Italian Grand Prix,Monza
+1,Max Verstappen,Red Bull Racing,1.0,1.0,25.0,Finished,2025,17,Azerbaijan Grand Prix,Baku
+63,George Russell,Mercedes,2.0,5.0,18.0,Finished,2025,17,Azerbaijan Grand Prix,Baku
+55,Carlos Sainz,Williams,3.0,2.0,15.0,Finished,2025,17,Azerbaijan Grand Prix,Baku
+12,Kimi Antonelli,Mercedes,4.0,4.0,12.0,Finished,2025,17,Azerbaijan Grand Prix,Baku
+30,Liam Lawson,Racing Bulls,5.0,3.0,10.0,Finished,2025,17,Azerbaijan Grand Prix,Baku
+22,Yuki Tsunoda,Red Bull Racing,6.0,6.0,8.0,Finished,2025,17,Azerbaijan Grand Prix,Baku
+4,Lando Norris,McLaren,7.0,7.0,6.0,Finished,2025,17,Azerbaijan Grand Prix,Baku
+44,Lewis Hamilton,Ferrari,8.0,12.0,4.0,Finished,2025,17,Azerbaijan Grand Prix,Baku
+16,Charles Leclerc,Ferrari,9.0,10.0,2.0,Finished,2025,17,Azerbaijan Grand Prix,Baku
+6,Isack Hadjar,Racing Bulls,10.0,8.0,1.0,Finished,2025,17,Azerbaijan Grand Prix,Baku
+5,Gabriel Bortoleto,Kick Sauber,11.0,13.0,0.0,Finished,2025,17,Azerbaijan Grand Prix,Baku
+87,Oliver Bearman,Haas F1 Team,12.0,15.0,0.0,Finished,2025,17,Azerbaijan Grand Prix,Baku
+23,Alexander Albon,Williams,13.0,19.0,0.0,Finished,2025,17,Azerbaijan Grand Prix,Baku
+31,Esteban Ocon,Haas F1 Team,14.0,20.0,0.0,Finished,2025,17,Azerbaijan Grand Prix,Baku
+14,Fernando Alonso,Aston Martin,15.0,11.0,0.0,Finished,2025,17,Azerbaijan Grand Prix,Baku
+27,Nico Hulkenberg,Kick Sauber,16.0,17.0,0.0,Finished,2025,17,Azerbaijan Grand Prix,Baku
+18,Lance Stroll,Aston Martin,17.0,14.0,0.0,Finished,2025,17,Azerbaijan Grand Prix,Baku
+10,Pierre Gasly,Alpine,18.0,18.0,0.0,Lapped,2025,17,Azerbaijan Grand Prix,Baku
+43,Franco Colapinto,Alpine,19.0,16.0,0.0,Lapped,2025,17,Azerbaijan Grand Prix,Baku
+81,Oscar Piastri,McLaren,20.0,9.0,0.0,Retired,2025,17,Azerbaijan Grand Prix,Baku
+63,George Russell,Mercedes,1.0,1.0,25.0,Finished,2025,18,Singapore Grand Prix,Marina Bay
+1,Max Verstappen,Red Bull Racing,2.0,2.0,18.0,Finished,2025,18,Singapore Grand Prix,Marina Bay
+4,Lando Norris,McLaren,3.0,5.0,15.0,Finished,2025,18,Singapore Grand Prix,Marina Bay
+81,Oscar Piastri,McLaren,4.0,3.0,12.0,Finished,2025,18,Singapore Grand Prix,Marina Bay
+12,Kimi Antonelli,Mercedes,5.0,4.0,10.0,Finished,2025,18,Singapore Grand Prix,Marina Bay
+16,Charles Leclerc,Ferrari,6.0,7.0,8.0,Finished,2025,18,Singapore Grand Prix,Marina Bay
+14,Fernando Alonso,Aston Martin,7.0,10.0,6.0,Finished,2025,18,Singapore Grand Prix,Marina Bay
+44,Lewis Hamilton,Ferrari,8.0,6.0,4.0,Finished,2025,18,Singapore Grand Prix,Marina Bay
+87,Oliver Bearman,Haas F1 Team,9.0,9.0,2.0,Finished,2025,18,Singapore Grand Prix,Marina Bay
+55,Carlos Sainz,Williams,10.0,18.0,1.0,Lapped,2025,18,Singapore Grand Prix,Marina Bay
+6,Isack Hadjar,Racing Bulls,11.0,8.0,0.0,Lapped,2025,18,Singapore Grand Prix,Marina Bay
+22,Yuki Tsunoda,Red Bull Racing,12.0,13.0,0.0,Lapped,2025,18,Singapore Grand Prix,Marina Bay
+18,Lance Stroll,Aston Martin,13.0,15.0,0.0,Lapped,2025,18,Singapore Grand Prix,Marina Bay
+23,Alexander Albon,Williams,14.0,20.0,0.0,Lapped,2025,18,Singapore Grand Prix,Marina Bay
+30,Liam Lawson,Racing Bulls,15.0,12.0,0.0,Lapped,2025,18,Singapore Grand Prix,Marina Bay
+43,Franco Colapinto,Alpine,16.0,16.0,0.0,Lapped,2025,18,Singapore Grand Prix,Marina Bay
+5,Gabriel Bortoleto,Kick Sauber,17.0,14.0,0.0,Lapped,2025,18,Singapore Grand Prix,Marina Bay
+31,Esteban Ocon,Haas F1 Team,18.0,17.0,0.0,Lapped,2025,18,Singapore Grand Prix,Marina Bay
+10,Pierre Gasly,Alpine,19.0,19.0,0.0,Lapped,2025,18,Singapore Grand Prix,Marina Bay
+27,Nico Hulkenberg,Kick Sauber,20.0,11.0,0.0,Lapped,2025,18,Singapore Grand Prix,Marina Bay
+1,Max Verstappen,Red Bull Racing,1.0,1.0,25.0,Finished,2025,19,United States Grand Prix,Austin
+4,Lando Norris,McLaren,2.0,2.0,18.0,Finished,2025,19,United States Grand Prix,Austin
+16,Charles Leclerc,Ferrari,3.0,3.0,15.0,Finished,2025,19,United States Grand Prix,Austin
+44,Lewis Hamilton,Ferrari,4.0,5.0,12.0,Finished,2025,19,United States Grand Prix,Austin
+81,Oscar Piastri,McLaren,5.0,6.0,10.0,Finished,2025,19,United States Grand Prix,Austin
+63,George Russell,Mercedes,6.0,4.0,8.0,Finished,2025,19,United States Grand Prix,Austin
+22,Yuki Tsunoda,Red Bull Racing,7.0,13.0,6.0,Finished,2025,19,United States Grand Prix,Austin
+27,Nico Hulkenberg,Kick Sauber,8.0,11.0,4.0,Finished,2025,19,United States Grand Prix,Austin
+87,Oliver Bearman,Haas F1 Team,9.0,8.0,2.0,Finished,2025,19,United States Grand Prix,Austin
+14,Fernando Alonso,Aston Martin,10.0,10.0,1.0,Finished,2025,19,United States Grand Prix,Austin
+30,Liam Lawson,Racing Bulls,11.0,12.0,0.0,Finished,2025,19,United States Grand Prix,Austin
+18,Lance Stroll,Aston Martin,12.0,19.0,0.0,Finished,2025,19,United States Grand Prix,Austin
+12,Kimi Antonelli,Mercedes,13.0,7.0,0.0,Finished,2025,19,United States Grand Prix,Austin
+23,Alexander Albon,Williams,14.0,18.0,0.0,Finished,2025,19,United States Grand Prix,Austin
+31,Esteban Ocon,Haas F1 Team,15.0,17.0,0.0,Finished,2025,19,United States Grand Prix,Austin
+6,Isack Hadjar,Racing Bulls,16.0,20.0,0.0,Finished,2025,19,United States Grand Prix,Austin
+43,Franco Colapinto,Alpine,17.0,15.0,0.0,Lapped,2025,19,United States Grand Prix,Austin
+5,Gabriel Bortoleto,Kick Sauber,18.0,16.0,0.0,Lapped,2025,19,United States Grand Prix,Austin
+10,Pierre Gasly,Alpine,19.0,14.0,0.0,Lapped,2025,19,United States Grand Prix,Austin
+55,Carlos Sainz,Williams,20.0,9.0,0.0,Retired,2025,19,United States Grand Prix,Austin
+4,Lando Norris,McLaren,1.0,1.0,25.0,Finished,2025,20,Mexico City Grand Prix,Mexico City
+16,Charles Leclerc,Ferrari,2.0,2.0,18.0,Finished,2025,20,Mexico City Grand Prix,Mexico City
+1,Max Verstappen,Red Bull Racing,3.0,5.0,15.0,Finished,2025,20,Mexico City Grand Prix,Mexico City
+87,Oliver Bearman,Haas F1 Team,4.0,9.0,12.0,Finished,2025,20,Mexico City Grand Prix,Mexico City
+81,Oscar Piastri,McLaren,5.0,7.0,10.0,Finished,2025,20,Mexico City Grand Prix,Mexico City
+12,Kimi Antonelli,Mercedes,6.0,6.0,8.0,Finished,2025,20,Mexico City Grand Prix,Mexico City
+63,George Russell,Mercedes,7.0,4.0,6.0,Finished,2025,20,Mexico City Grand Prix,Mexico City
+44,Lewis Hamilton,Ferrari,8.0,3.0,4.0,Finished,2025,20,Mexico City Grand Prix,Mexico City
+31,Esteban Ocon,Haas F1 Team,9.0,11.0,2.0,Finished,2025,20,Mexico City Grand Prix,Mexico City
+5,Gabriel Bortoleto,Kick Sauber,10.0,16.0,1.0,Finished,2025,20,Mexico City Grand Prix,Mexico City
+22,Yuki Tsunoda,Red Bull Racing,11.0,10.0,0.0,Finished,2025,20,Mexico City Grand Prix,Mexico City
+23,Alexander Albon,Williams,12.0,17.0,0.0,Lapped,2025,20,Mexico City Grand Prix,Mexico City
+6,Isack Hadjar,Racing Bulls,13.0,8.0,0.0,Lapped,2025,20,Mexico City Grand Prix,Mexico City
+18,Lance Stroll,Aston Martin,14.0,19.0,0.0,Lapped,2025,20,Mexico City Grand Prix,Mexico City
+10,Pierre Gasly,Alpine,15.0,18.0,0.0,Lapped,2025,20,Mexico City Grand Prix,Mexico City
+43,Franco Colapinto,Alpine,16.0,20.0,0.0,Lapped,2025,20,Mexico City Grand Prix,Mexico City
+55,Carlos Sainz,Williams,17.0,12.0,0.0,Retired,2025,20,Mexico City Grand Prix,Mexico City
+14,Fernando Alonso,Aston Martin,18.0,14.0,0.0,Retired,2025,20,Mexico City Grand Prix,Mexico City
+27,Nico Hulkenberg,Kick Sauber,19.0,13.0,0.0,Retired,2025,20,Mexico City Grand Prix,Mexico City
+30,Liam Lawson,Racing Bulls,20.0,15.0,0.0,Retired,2025,20,Mexico City Grand Prix,Mexico City
+4,Lando Norris,McLaren,1.0,1.0,25.0,Finished,2025,21,São Paulo Grand Prix,São Paulo
+12,Kimi Antonelli,Mercedes,2.0,2.0,18.0,Finished,2025,21,São Paulo Grand Prix,São Paulo
+1,Max Verstappen,Red Bull Racing,3.0,19.0,15.0,Finished,2025,21,São Paulo Grand Prix,São Paulo
+63,George Russell,Mercedes,4.0,6.0,12.0,Finished,2025,21,São Paulo Grand Prix,São Paulo
+81,Oscar Piastri,McLaren,5.0,4.0,10.0,Finished,2025,21,São Paulo Grand Prix,São Paulo
+87,Oliver Bearman,Haas F1 Team,6.0,8.0,8.0,Finished,2025,21,São Paulo Grand Prix,São Paulo
+30,Liam Lawson,Racing Bulls,7.0,7.0,6.0,Finished,2025,21,São Paulo Grand Prix,São Paulo
+6,Isack Hadjar,Racing Bulls,8.0,5.0,4.0,Finished,2025,21,São Paulo Grand Prix,São Paulo
+27,Nico Hulkenberg,Kick Sauber,9.0,10.0,2.0,Finished,2025,21,São Paulo Grand Prix,São Paulo
+10,Pierre Gasly,Alpine,10.0,9.0,1.0,Finished,2025,21,São Paulo Grand Prix,São Paulo
+23,Alexander Albon,Williams,11.0,12.0,0.0,Finished,2025,21,São Paulo Grand Prix,São Paulo
+31,Esteban Ocon,Haas F1 Team,12.0,20.0,0.0,Finished,2025,21,São Paulo Grand Prix,São Paulo
+55,Carlos Sainz,Williams,13.0,15.0,0.0,Finished,2025,21,São Paulo Grand Prix,São Paulo
+14,Fernando Alonso,Aston Martin,14.0,11.0,0.0,Finished,2025,21,São Paulo Grand Prix,São Paulo
+43,Franco Colapinto,Alpine,15.0,16.0,0.0,Finished,2025,21,São Paulo Grand Prix,São Paulo
+18,Lance Stroll,Aston Martin,16.0,14.0,0.0,Finished,2025,21,São Paulo Grand Prix,São Paulo
+22,Yuki Tsunoda,Red Bull Racing,17.0,17.0,0.0,Finished,2025,21,São Paulo Grand Prix,São Paulo
+44,Lewis Hamilton,Ferrari,18.0,13.0,0.0,Retired,2025,21,São Paulo Grand Prix,São Paulo
+16,Charles Leclerc,Ferrari,19.0,3.0,0.0,Retired,2025,21,São Paulo Grand Prix,São Paulo
+5,Gabriel Bortoleto,Kick Sauber,20.0,18.0,0.0,Retired,2025,21,São Paulo Grand Prix,São Paulo
+1,Max Verstappen,Red Bull Racing,1.0,2.0,25.0,Finished,2025,22,Las Vegas Grand Prix,Las Vegas
+63,George Russell,Mercedes,2.0,4.0,18.0,Finished,2025,22,Las Vegas Grand Prix,Las Vegas
+12,Kimi Antonelli,Mercedes,3.0,17.0,15.0,Finished,2025,22,Las Vegas Grand Prix,Las Vegas
+16,Charles Leclerc,Ferrari,4.0,9.0,12.0,Finished,2025,22,Las Vegas Grand Prix,Las Vegas
+55,Carlos Sainz,Williams,5.0,3.0,10.0,Finished,2025,22,Las Vegas Grand Prix,Las Vegas
+6,Isack Hadjar,Racing Bulls,6.0,8.0,8.0,Finished,2025,22,Las Vegas Grand Prix,Las Vegas
+27,Nico Hulkenberg,Kick Sauber,7.0,11.0,6.0,Finished,2025,22,Las Vegas Grand Prix,Las Vegas
+44,Lewis Hamilton,Ferrari,8.0,19.0,4.0,Finished,2025,22,Las Vegas Grand Prix,Las Vegas
+31,Esteban Ocon,Haas F1 Team,9.0,13.0,2.0,Finished,2025,22,Las Vegas Grand Prix,Las Vegas
+87,Oliver Bearman,Haas F1 Team,10.0,14.0,1.0,Finished,2025,22,Las Vegas Grand Prix,Las Vegas
+14,Fernando Alonso,Aston Martin,11.0,7.0,0.0,Finished,2025,22,Las Vegas Grand Prix,Las Vegas
+22,Yuki Tsunoda,Red Bull Racing,12.0,20.0,0.0,Finished,2025,22,Las Vegas Grand Prix,Las Vegas
+10,Pierre Gasly,Alpine,13.0,10.0,0.0,Finished,2025,22,Las Vegas Grand Prix,Las Vegas
+30,Liam Lawson,Racing Bulls,14.0,6.0,0.0,Lapped,2025,22,Las Vegas Grand Prix,Las Vegas
+43,Franco Colapinto,Alpine,15.0,15.0,0.0,Lapped,2025,22,Las Vegas Grand Prix,Las Vegas
+23,Alexander Albon,Williams,16.0,16.0,0.0,Retired,2025,22,Las Vegas Grand Prix,Las Vegas
+5,Gabriel Bortoleto,Kick Sauber,17.0,18.0,0.0,Retired,2025,22,Las Vegas Grand Prix,Las Vegas
+18,Lance Stroll,Aston Martin,18.0,12.0,0.0,Retired,2025,22,Las Vegas Grand Prix,Las Vegas
+4,Lando Norris,McLaren,19.0,1.0,0.0,Disqualified,2025,22,Las Vegas Grand Prix,Las Vegas
+81,Oscar Piastri,McLaren,20.0,5.0,0.0,Disqualified,2025,22,Las Vegas Grand Prix,Las Vegas
+1,Max Verstappen,Red Bull Racing,1.0,3.0,25.0,Finished,2025,23,Qatar Grand Prix,Lusail
+81,Oscar Piastri,McLaren,2.0,1.0,18.0,Finished,2025,23,Qatar Grand Prix,Lusail
+55,Carlos Sainz,Williams,3.0,7.0,15.0,Finished,2025,23,Qatar Grand Prix,Lusail
+4,Lando Norris,McLaren,4.0,2.0,12.0,Finished,2025,23,Qatar Grand Prix,Lusail
+12,Kimi Antonelli,Mercedes,5.0,5.0,10.0,Finished,2025,23,Qatar Grand Prix,Lusail
+63,George Russell,Mercedes,6.0,4.0,8.0,Finished,2025,23,Qatar Grand Prix,Lusail
+14,Fernando Alonso,Aston Martin,7.0,8.0,6.0,Finished,2025,23,Qatar Grand Prix,Lusail
+16,Charles Leclerc,Ferrari,8.0,10.0,4.0,Finished,2025,23,Qatar Grand Prix,Lusail
+30,Liam Lawson,Racing Bulls,9.0,12.0,2.0,Finished,2025,23,Qatar Grand Prix,Lusail
+22,Yuki Tsunoda,Red Bull Racing,10.0,15.0,1.0,Finished,2025,23,Qatar Grand Prix,Lusail
+23,Alexander Albon,Williams,11.0,14.0,0.0,Finished,2025,23,Qatar Grand Prix,Lusail
+44,Lewis Hamilton,Ferrari,12.0,17.0,0.0,Finished,2025,23,Qatar Grand Prix,Lusail
+5,Gabriel Bortoleto,Kick Sauber,13.0,19.0,0.0,Finished,2025,23,Qatar Grand Prix,Lusail
+43,Franco Colapinto,Alpine,14.0,20.0,0.0,Lapped,2025,23,Qatar Grand Prix,Lusail
+31,Esteban Ocon,Haas F1 Team,15.0,16.0,0.0,Lapped,2025,23,Qatar Grand Prix,Lusail
+10,Pierre Gasly,Alpine,16.0,9.0,0.0,Lapped,2025,23,Qatar Grand Prix,Lusail
+18,Lance Stroll,Aston Martin,17.0,18.0,0.0,Retired,2025,23,Qatar Grand Prix,Lusail
+6,Isack Hadjar,Racing Bulls,18.0,6.0,0.0,Retired,2025,23,Qatar Grand Prix,Lusail
+87,Oliver Bearman,Haas F1 Team,19.0,13.0,0.0,Retired,2025,23,Qatar Grand Prix,Lusail
+27,Nico Hulkenberg,Kick Sauber,20.0,11.0,0.0,Retired,2025,23,Qatar Grand Prix,Lusail
+1,Max Verstappen,Red Bull Racing,1.0,1.0,25.0,Finished,2025,24,Abu Dhabi Grand Prix,Yas Island
+81,Oscar Piastri,McLaren,2.0,3.0,18.0,Finished,2025,24,Abu Dhabi Grand Prix,Yas Island
+4,Lando Norris,McLaren,3.0,2.0,15.0,Finished,2025,24,Abu Dhabi Grand Prix,Yas Island
+16,Charles Leclerc,Ferrari,4.0,5.0,12.0,Finished,2025,24,Abu Dhabi Grand Prix,Yas Island
+63,George Russell,Mercedes,5.0,4.0,10.0,Finished,2025,24,Abu Dhabi Grand Prix,Yas Island
+14,Fernando Alonso,Aston Martin,6.0,6.0,8.0,Finished,2025,24,Abu Dhabi Grand Prix,Yas Island
+31,Esteban Ocon,Haas F1 Team,7.0,8.0,6.0,Finished,2025,24,Abu Dhabi Grand Prix,Yas Island
+44,Lewis Hamilton,Ferrari,8.0,16.0,4.0,Finished,2025,24,Abu Dhabi Grand Prix,Yas Island
+27,Nico Hulkenberg,Kick Sauber,9.0,18.0,2.0,Finished,2025,24,Abu Dhabi Grand Prix,Yas Island
+18,Lance Stroll,Aston Martin,10.0,15.0,1.0,Finished,2025,24,Abu Dhabi Grand Prix,Yas Island
+5,Gabriel Bortoleto,Kick Sauber,11.0,7.0,0.0,Finished,2025,24,Abu Dhabi Grand Prix,Yas Island
+87,Oliver Bearman,Haas F1 Team,12.0,11.0,0.0,Finished,2025,24,Abu Dhabi Grand Prix,Yas Island
+55,Carlos Sainz,Williams,13.0,12.0,0.0,Finished,2025,24,Abu Dhabi Grand Prix,Yas Island
+22,Yuki Tsunoda,Red Bull Racing,14.0,10.0,0.0,Finished,2025,24,Abu Dhabi Grand Prix,Yas Island
+12,Kimi Antonelli,Mercedes,15.0,14.0,0.0,Finished,2025,24,Abu Dhabi Grand Prix,Yas Island
+23,Alexander Albon,Williams,16.0,17.0,0.0,Finished,2025,24,Abu Dhabi Grand Prix,Yas Island
+6,Isack Hadjar,Racing Bulls,17.0,9.0,0.0,Lapped,2025,24,Abu Dhabi Grand Prix,Yas Island
+30,Liam Lawson,Racing Bulls,18.0,13.0,0.0,Lapped,2025,24,Abu Dhabi Grand Prix,Yas Island
+10,Pierre Gasly,Alpine,19.0,19.0,0.0,Lapped,2025,24,Abu Dhabi Grand Prix,Yas Island
+43,Franco Colapinto,Alpine,20.0,20.0,0.0,Lapped,2025,24,Abu Dhabi Grand Prix,Yas Island
