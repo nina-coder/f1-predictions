@@ -65,13 +65,15 @@
     overflow-x: auto;
   }
 
-  /* Images/charts */
+  /* Images/charts — no scrollbars */
   .jp-OutputArea-output img,
   .jp-RenderedImage img {
     border-radius: 8px;
     border: 1px solid #333;
     margin: 10px 0;
     max-width: 100%;
+    width: 100%;
+    height: auto;
   }
 
   /* Tables */
