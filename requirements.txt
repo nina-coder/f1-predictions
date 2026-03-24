@@ -1,0 +1,5 @@
+jupyterlab
+fastf1
+pandas
+scikit-learn
+matplotlib
