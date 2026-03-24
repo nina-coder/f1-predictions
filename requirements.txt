@@ -3,3 +3,4 @@ fastf1
 pandas
 scikit-learn
 matplotlib
+xgboost
