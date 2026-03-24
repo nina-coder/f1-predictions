@@ -7935,41 +7935,59 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="%F0%9F%8F%8E%EF%B8%8F-Nina's-F1-Predictions:-2026-Japanese-Grand-Prix-(Round-3)">🏎️ Nina's F1 Predictions: 2026 Japanese Grand Prix (Round 3)<a class="anchor-link" href="#%F0%9F%8F%8E%EF%B8%8F-Nina's-F1-Predictions:-2026-Japanese-Grand-Prix-(Round-3)">¶</a></h1><h2 id="Suzuka-Circuit-%E2%80%94-March-27-29,-2026">Suzuka Circuit — March 27-29, 2026<a class="anchor-link" href="#Suzuka-Circuit-%E2%80%94-March-27-29,-2026">¶</a></h2><p><strong>Model version:</strong> v1.0 (Complete race engineer model — 24 features)<br/>
-<strong>Data:</strong> 72 races + lap telemetry for 15 races + advanced features<br/>
+<h1 id="%F0%9F%8F%8E%EF%B8%8F-Nina's-F1-Predictions:-2026-Japanese-Grand-Prix-(Round-3)">🏎️ Nina's F1 Predictions: 2026 Japanese Grand Prix (Round 3)<a class="anchor-link" href="#%F0%9F%8F%8E%EF%B8%8F-Nina's-F1-Predictions:-2026-Japanese-Grand-Prix-(Round-3)">¶</a></h1><h2 id="Suzuka-Circuit-%E2%80%94-March-27-29,-2026">Suzuka Circuit — March 27-29, 2026<a class="anchor-link" href="#Suzuka-Circuit-%E2%80%94-March-27-29,-2026">¶</a></h2><p><strong>Model version:</strong> v1.0 (Complete race engineer model)<br/>
+<strong>Data:</strong> 72 races (2023-2026), 1,442 results + lap telemetry + weather<br/>
 <strong>Last updated:</strong> March 24, 2026</p>
-<h3 id="v1.0-Features-(21-total)">v1.0 Features (21 total)<a class="anchor-link" href="#v1.0-Features-(21-total)">¶</a></h3><p>The most comprehensive model yet. Six new features:</p>
+<h3 id="What-This-Is">What This Is<a class="anchor-link" href="#What-This-Is">¶</a></h3><p>A machine learning model that predicts Formula 1 race results and optimizes F1 Fantasy lineups. The model analyzes 24 different factors — the same kinds of data a race engineer would consider when building a race strategy — and runs 10,000 simulated races to estimate each driver's probability of finishing on the podium, in the points, or beating their teammate.</p>
+<p>The 2026 season introduced <strong>massive regulation changes</strong> — new power units (50/50 electric/ICE), active aerodynamics that replace DRS, smaller and lighter cars, and 100% sustainable fuels. The entire competitive order has been reshuffled. Mercedes went from struggling to dominant. McLaren went from champions to backmarkers. Red Bull went from winning everything to Tier 4. This model accounts for that by weighting 2026 data 10x more heavily than historical data.</p>
+<h3 id="The-24-Features">The 24 Features<a class="anchor-link" href="#The-24-Features">¶</a></h3><p>The model looks at every driver through these lenses:</p>
+<p><strong>Car Performance (2026 only):</strong></p>
 <ul>
-<li><strong>🚀 First lap performance</strong> — who gains/loses positions at the start</li>
-<li><strong>🛞 Tire degradation rate</strong> — who's gentle on tires (longer stints, fewer stops)</li>
-<li><strong>📈 Season momentum</strong> — trending up or down over last 5 races</li>
-<li><strong>🟡 Safety car probability</strong> — Suzuka has 33% SC rate (1 of 3 recent races)</li>
-<li><strong>🏎️ Overtaking difficulty</strong> — how much grid position matters at this track</li>
-<li><strong>🗾 Suzuka sector pace</strong> — S1 (technical Esses), S2 (power straight), S3 (mixed) performance per driver</li>
-<li><strong>🟡 Safety car impact</strong> — wired into simulations (33% SC probability at Suzuka, benefits midfield)</li>
-<li><strong>🚫 active aero references removed</strong> — 2026 uses active aero, not active aero</li>
-<li><strong>⏱️ Quali vs race gap</strong> — "Saturday car" vs "Sunday car" teams</li>
+<li>🏗️ Constructor pace — average finish position by team this season</li>
+<li>⚡ Straight-line speed — speed trap data, critical for Suzuka's 1.2km back straight</li>
 </ul>
+<p><strong>Driver Skill (all years, car-independent):</strong></p>
+<ul>
+<li>👤 Teammate delta — how much better/worse than their teammate</li>
+<li>📊 Recent form — rolling average finish position</li>
+<li>🚀 First lap performance — who consistently gains/loses positions at the start</li>
+<li>📈 Season momentum — are they trending up or down? (uses current team only for drivers who switched)</li>
+<li>🎯 Positions gained per race — racecraft and overtaking ability</li>
+<li>⏱️ Qualifying vs race pace — "Saturday car" vs "Sunday car"</li>
+</ul>
+<p><strong>Tire &amp; Strategy:</strong></p>
+<ul>
+<li>🛞 Tire degradation rate — who's gentle on tires (longer stints, fewer stops)</li>
+<li>🔧 Pit stop frequency — driver and team pit stop patterns</li>
+</ul>
+<p><strong>Track-Specific (Suzuka):</strong></p>
+<ul>
+<li>🗾 Sector 1 pace — technical corners through The Esses</li>
+<li>🗾 Sector 2 pace — power sector (back straight + Degner curves)</li>
+<li>🗾 Sector 3 pace — mixed character (Spoon, 130R, chicane)</li>
+<li>🏁 Track experience — how many times they've raced here</li>
+</ul>
+<p><strong>Conditions &amp; Context:</strong></p>
+<ul>
+<li>🌡️ Weather — temperature, humidity, rainfall</li>
+<li>🌧️ Wet-weather skill — positions gained in historical rain races</li>
+<li>🟡 Safety car — 33% probability at Suzuka, wired into simulations</li>
+<li>🔄 Team changed — 9 of 22 drivers switched teams for 2026 (adds uncertainty)</li>
+<li>📋 Consistency — lap time variation (lower = more reliable)</li>
+<li>🏎️ DNF rate — reliability factor</li>
+<li>🔬 2026 flag — tells the model this is a regulation-change year</li>
+</ul>
+<h3 id="How-It-Works">How It Works<a class="anchor-link" href="#How-It-Works">¶</a></h3><ol>
+<li><strong>Two-model approach:</strong> Car pace comes ONLY from 2026 data. Driver skill uses all 72 races but measures performance relative to the car — so it transfers across regulation changes.</li>
+<li><strong>XGBoost machine learning</strong> — the gold standard algorithm for F1 prediction (77-82% winner accuracy in published research). It automatically learns which features matter most.</li>
+<li><strong>10,000 simulated races</strong> — each simulation adds realistic randomness (safety cars, incidents, mechanical failures) calibrated to the model's actual prediction error. This produces probabilities, not just a single prediction.</li>
+<li><strong>Honest validation</strong> — we use leave-one-out cross-validation on 2026 data. The accuracy we report (MAE 2.39 positions) is real — the model never saw the data it was tested on.</li>
+</ol>
+<p><strong>Important:</strong> Qualifying hasn't happened yet, so grid positions are estimated. After Saturday qualifying, these predictions will be re-run with actual grid positions — the single biggest accuracy improvement available.</p>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noInput" id="cell-id=73297d01">
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Data loaded:
-  Race results: 1442 entries
-  Advanced features: 303 entries
-  Suzuka overtaking rate: 1.9 avg position changes
-  Suzuka SC probability: 33%
-</pre>
-</div>
-</div>
-</div>
-</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs jp-mod-noInput" id="cell-id=73297d01">
 </div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=5764229f">
 <div class="jp-Cell-inputWrapper" tabindex="0">
@@ -8493,7 +8511,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="11.-Summary-&amp;-Model-History">11. Summary &amp; Model History<a class="anchor-link" href="#11.-Summary-&amp;-Model-History">¶</a></h2><h3 id="Confidence:-MEDIUM-HIGH-(for-pre-qualifying)">Confidence: MEDIUM-HIGH (for pre-qualifying)<a class="anchor-link" href="#Confidence:-MEDIUM-HIGH-(for-pre-qualifying)">¶</a></h3><table>
+<h3 id="Confidence:-MEDIUM-HIGH-(for-pre-qualifying)">Confidence: MEDIUM-HIGH (for pre-qualifying)<a class="anchor-link" href="#Confidence:-MEDIUM-HIGH-(for-pre-qualifying)">¶</a></h3><table>
 <thead>
 <tr>
 <th>Version</th>
@@ -8512,40 +8530,64 @@ a.anchor-link {
 <tr>
 <td>v0.2</td>
 <td>9</td>
-<td>Regulation-aware</td>
+<td>Regulation-aware weighting</td>
 <td>LOW-MEDIUM</td>
 </tr>
 <tr>
 <td>v0.3</td>
 <td>9</td>
-<td>XGBoost</td>
+<td>XGBoost ML</td>
 <td>MEDIUM</td>
 </tr>
 <tr>
 <td>v0.4</td>
 <td>15</td>
-<td>Two-model + weather</td>
+<td>Two-model approach + weather</td>
 <td>MEDIUM</td>
 </tr>
 <tr>
 <td>v0.5</td>
 <td>15</td>
-<td>Speed traps + consistency</td>
+<td>Speed traps + lap consistency</td>
 <td>MEDIUM</td>
 </tr>
 <tr>
+<td>v0.6</td>
+<td>18</td>
+<td>First lap + tire degradation + momentum</td>
+<td>MEDIUM</td>
+</tr>
+<tr>
+<td>v0.7</td>
+<td>21</td>
+<td>Suzuka sectors + safety car simulations</td>
+<td>MEDIUM-HIGH</td>
+</tr>
+<tr>
+<td>v0.8</td>
+<td>21</td>
+<td>2026 data weighted 10x (car &gt; driver fix)</td>
+<td>MEDIUM-HIGH</td>
+</tr>
+<tr>
+<td>v0.9</td>
+<td>22</td>
+<td>Honest validation + team change flag</td>
+<td>MEDIUM-HIGH</td>
+</tr>
+<tr>
 <td><strong>v1.0</strong></td>
-<td><strong>21</strong></td>
-<td><strong>Sectors + safety car + no DRS</strong></td>
+<td><strong>24</strong></td>
+<td><strong>+ tire strategy (pit stops, conservation)</strong></td>
 <td><strong>MEDIUM-HIGH</strong></td>
 </tr>
 </tbody>
 </table>
 <h3 id="Still-To-Come">Still To Come<a class="anchor-link" href="#Still-To-Come">¶</a></h3><ul>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox"/><strong>Qualifying data (Saturday)</strong> — instant accuracy boost</li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox"/><strong>Practice pace (Friday)</strong> — Suzuka-specific car performance</li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox"/>Safety car impact modeling</li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox"/>active aero overtake probability from speed gaps</li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox"/><strong>Qualifying data (Saturday)</strong> — the #1 predictor, instant jump to HIGH confidence</li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox"/><strong>Practice pace (Friday)</strong> — FP1/FP2 Suzuka-specific car speed</li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox"/>Enhanced safety car modeling (pit window timing)</li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox"/>Overtake probability from speed differentials</li>
 <li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox"/>Actual F1 Fantasy prices for precise value calculations</li>
 </ul>
 </div>
