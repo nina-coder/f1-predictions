@@ -1,6 +1,6 @@
-jupyterlab
 fastf1
+jupyterlab
+matplotlib
 pandas
 scikit-learn
-matplotlib
 xgboost
