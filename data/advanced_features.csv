@@ -1,0 +1,304 @@
+Year,Round,RaceName,FullName,Team,first_lap_gain,tire_degradation,quali_race_gap,had_safety_car,grid,finish
+2025,3,Japanese Grand Prix,Max Verstappen,Red Bull Racing,0.0,-0.07227761018744522,0.0,False,1.0,1.0
+2025,3,Japanese Grand Prix,Lando Norris,McLaren,0.0,-0.0746122944779635,0.0,False,2.0,2.0
+2025,3,Japanese Grand Prix,Oscar Piastri,McLaren,0.0,-0.08211832734089296,0.0,False,3.0,3.0
+2025,3,Japanese Grand Prix,Charles Leclerc,Ferrari,0.0,-0.06675983281904971,0.0,False,4.0,4.0
+2025,3,Japanese Grand Prix,George Russell,Mercedes,0.0,-0.08517337205688172,0.0,False,5.0,5.0
+2025,3,Japanese Grand Prix,Kimi Antonelli,Mercedes,0.0,-0.0007859814082705058,0.0,False,6.0,6.0
+2025,3,Japanese Grand Prix,Lewis Hamilton,Ferrari,0.0,-0.0052564089849746675,1.0,False,8.0,7.0
+2025,3,Japanese Grand Prix,Isack Hadjar,Racing Bulls,0.0,-0.07899236946601282,-1.0,False,7.0,8.0
+2025,3,Japanese Grand Prix,Alexander Albon,Williams,0.0,-0.0929756462112772,0.0,False,9.0,9.0
+2025,3,Japanese Grand Prix,Oliver Bearman,Haas F1 Team,0.0,-0.06755709454018585,0.0,False,10.0,10.0
+2025,3,Japanese Grand Prix,Fernando Alonso,Aston Martin,1.0,-0.060462034866012725,1.0,False,12.0,11.0
+2025,3,Japanese Grand Prix,Yuki Tsunoda,Red Bull Racing,1.0,-0.0750103643551673,2.0,False,14.0,12.0
+2025,3,Japanese Grand Prix,Pierre Gasly,Alpine,-1.0,-0.05387223115556358,-2.0,False,11.0,13.0
+2025,3,Japanese Grand Prix,Carlos Sainz,Williams,-1.0,0.033686835075759376,1.0,False,15.0,14.0
+2025,3,Japanese Grand Prix,Jack Doohan,Alpine,1.0,-0.059451656618173795,4.0,False,19.0,15.0
+2025,3,Japanese Grand Prix,Nico Hulkenberg,Kick Sauber,1.0,-0.0663771206225656,0.0,False,16.0,16.0
+2025,3,Japanese Grand Prix,Liam Lawson,Racing Bulls,-1.0,0.0249273591857404,-4.0,False,13.0,17.0
+2025,3,Japanese Grand Prix,Esteban Ocon,Haas F1 Team,1.0,0.013495619674092442,0.0,False,18.0,18.0
+2025,3,Japanese Grand Prix,Gabriel Bortoleto,Kick Sauber,-3.0,-0.004714392563306233,-2.0,False,17.0,19.0
+2025,3,Japanese Grand Prix,Lance Stroll,Aston Martin,1.0,-0.0827532001984601,0.0,False,20.0,20.0
+2024,4,Japanese Grand Prix,Max Verstappen,Red Bull Racing,0.0,0.020834033193364493,0.0,False,1.0,1.0
+2024,4,Japanese Grand Prix,Sergio Perez,Red Bull Racing,0.0,-0.012401328273242479,0.0,False,2.0,2.0
+2024,4,Japanese Grand Prix,Carlos Sainz,Ferrari,0.0,0.02627423896499368,1.0,False,4.0,3.0
+2024,4,Japanese Grand Prix,Charles Leclerc,Ferrari,0.0,-0.04632091528655679,4.0,False,8.0,4.0
+2024,4,Japanese Grand Prix,Lando Norris,McLaren,0.0,-0.06051457496257569,-2.0,False,3.0,5.0
+2024,4,Japanese Grand Prix,Fernando Alonso,Aston Martin,0.0,-0.01658760017809374,-1.0,False,5.0,6.0
+2024,4,Japanese Grand Prix,George Russell,Mercedes,0.0,0.11949074132194809,2.0,False,9.0,7.0
+2024,4,Japanese Grand Prix,Oscar Piastri,McLaren,0.0,0.005834781872085987,-2.0,False,6.0,8.0
+2024,4,Japanese Grand Prix,Lewis Hamilton,Mercedes,0.0,0.18237798513363634,-2.0,False,7.0,9.0
+2024,4,Japanese Grand Prix,Yuki Tsunoda,RB,-2.0,-0.04756981596404796,0.0,False,10.0,10.0
+2024,4,Japanese Grand Prix,Nico Hulkenberg,Haas F1 Team,2.0,0.09085308416894317,1.0,False,12.0,11.0
+2024,4,Japanese Grand Prix,Lance Stroll,Aston Martin,1.0,-0.010334641148322008,4.0,False,16.0,12.0
+2024,4,Japanese Grand Prix,Kevin Magnussen,Haas F1 Team,2.0,-0.16876074327981247,5.0,False,18.0,13.0
+2024,4,Japanese Grand Prix,Valtteri Bottas,Kick Sauber,2.0,-0.1688904126204963,-1.0,False,13.0,14.0
+2024,4,Japanese Grand Prix,Esteban Ocon,Alpine,2.0,-0.30303258604357086,0.0,False,15.0,15.0
+2024,4,Japanese Grand Prix,Pierre Gasly,Alpine,3.0,-0.28976667755368707,1.0,False,17.0,16.0
+2024,4,Japanese Grand Prix,Logan Sargeant,Williams,2.0,-0.02881564856299955,2.0,False,19.0,17.0
+2024,4,Japanese Grand Prix,Guanyu Zhou,Kick Sauber,2.0,-4.5118292682926775,2.0,False,20.0,18.0
+2024,4,Japanese Grand Prix,Daniel Ricciardo,RB,0.0,0.0,-8.0,False,11.0,19.0
+2024,4,Japanese Grand Prix,Alexander Albon,Williams,0.0,0.0,-6.0,False,14.0,20.0
+2023,16,Japanese Grand Prix,Max Verstappen,Red Bull Racing,0.0,0.08241717791410569,0.0,True,1.0,1.0
+2023,16,Japanese Grand Prix,Lando Norris,McLaren,1.0,0.08464778706283117,1.0,True,3.0,2.0
+2023,16,Japanese Grand Prix,Oscar Piastri,McLaren,-1.0,0.021319781346089136,-1.0,True,2.0,3.0
+2023,16,Japanese Grand Prix,Charles Leclerc,Ferrari,0.0,0.053927860696519433,0.0,True,4.0,4.0
+2023,16,Japanese Grand Prix,Lewis Hamilton,Mercedes,-1.0,0.0442463768115939,2.0,True,7.0,5.0
+2023,16,Japanese Grand Prix,Carlos Sainz,Ferrari,1.0,0.09783645994261833,0.0,True,6.0,6.0
+2023,16,Japanese Grand Prix,George Russell,Mercedes,-1.0,0.03475464110021838,1.0,True,8.0,7.0
+2023,16,Japanese Grand Prix,Fernando Alonso,Aston Martin,4.0,0.027231837344694625,2.0,True,10.0,8.0
+2023,16,Japanese Grand Prix,Esteban Ocon,Alpine,-5.0,0.05195763644141931,5.0,True,14.0,9.0
+2023,16,Japanese Grand Prix,Pierre Gasly,Alpine,-2.0,0.12264889193163755,2.0,True,12.0,10.0
+2023,16,Japanese Grand Prix,Liam Lawson,AlphaTauri,1.0,-0.03348309081190335,0.0,True,11.0,11.0
+2023,16,Japanese Grand Prix,Yuki Tsunoda,AlphaTauri,-2.0,0.06481803880440519,-3.0,True,9.0,12.0
+2023,16,Japanese Grand Prix,Guanyu Zhou,Alfa Romeo,1.0,-0.03279168390566819,6.0,True,19.0,13.0
+2023,16,Japanese Grand Prix,Nico Hulkenberg,Haas F1 Team,5.0,0.0014574413426972097,4.0,True,18.0,14.0
+2023,16,Japanese Grand Prix,Kevin Magnussen,Haas F1 Team,0.0,0.05553501293633794,0.0,True,15.0,15.0
+2023,16,Japanese Grand Prix,Alexander Albon,Williams,-4.0,0.08082783505154342,-3.0,True,13.0,16.0
+2023,16,Japanese Grand Prix,Logan Sargeant,Williams,4.0,0.08574008810572326,3.0,True,20.0,17.0
+2023,16,Japanese Grand Prix,Lance Stroll,Aston Martin,5.0,0.08737243401759402,-1.0,True,17.0,18.0
+2023,16,Japanese Grand Prix,Sergio Perez,Red Bull Racing,-2.0,0.10839285714284823,-14.0,True,5.0,19.0
+2023,16,Japanese Grand Prix,Valtteri Bottas,Alfa Romeo,-4.0,0.0,-4.0,True,16.0,20.0
+2025,24,Abu Dhabi Grand Prix,Max Verstappen,Red Bull Racing,0.0,-0.0208350917213193,0.0,False,1.0,1.0
+2025,24,Abu Dhabi Grand Prix,Oscar Piastri,McLaren,1.0,0.029075275391233626,1.0,False,3.0,2.0
+2025,24,Abu Dhabi Grand Prix,Lando Norris,McLaren,-1.0,-0.04691563553283316,-1.0,False,2.0,3.0
+2025,24,Abu Dhabi Grand Prix,Charles Leclerc,Ferrari,1.0,-0.058364633026495895,1.0,False,5.0,4.0
+2025,24,Abu Dhabi Grand Prix,George Russell,Mercedes,-2.0,-0.029816135262193358,-1.0,False,4.0,5.0
+2025,24,Abu Dhabi Grand Prix,Fernando Alonso,Aston Martin,1.0,-0.04102105012660841,0.0,False,6.0,6.0
+2025,24,Abu Dhabi Grand Prix,Esteban Ocon,Haas F1 Team,-1.0,-0.03398476740950287,1.0,False,8.0,7.0
+2025,24,Abu Dhabi Grand Prix,Lewis Hamilton,Ferrari,2.0,0.00034271757826021074,8.0,False,16.0,8.0
+2025,24,Abu Dhabi Grand Prix,Nico Hulkenberg,Kick Sauber,0.0,0.046919961652486665,9.0,False,18.0,9.0
+2025,24,Abu Dhabi Grand Prix,Lance Stroll,Aston Martin,-1.0,0.026178958488690958,5.0,False,15.0,10.0
+2025,24,Abu Dhabi Grand Prix,Gabriel Bortoleto,Kick Sauber,0.0,-0.017263139186185716,-4.0,False,7.0,11.0
+2025,24,Abu Dhabi Grand Prix,Oliver Bearman,Haas F1 Team,-1.0,-0.024908985896410742,-1.0,False,11.0,12.0
+2025,24,Abu Dhabi Grand Prix,Carlos Sainz,Williams,-1.0,-0.01915376591477001,-1.0,False,12.0,13.0
+2025,24,Abu Dhabi Grand Prix,Yuki Tsunoda,Red Bull Racing,0.0,0.025449649649652923,-4.0,False,10.0,14.0
+2025,24,Abu Dhabi Grand Prix,Kimi Antonelli,Mercedes,-3.0,0.04323958958959261,-1.0,False,14.0,15.0
+2025,24,Abu Dhabi Grand Prix,Alexander Albon,Williams,2.0,0.006044032166425582,1.0,False,17.0,16.0
+2025,24,Abu Dhabi Grand Prix,Isack Hadjar,Racing Bulls,1.0,-0.014549810819912093,-8.0,False,9.0,17.0
+2025,24,Abu Dhabi Grand Prix,Liam Lawson,Racing Bulls,2.0,-0.017585059371715128,-5.0,False,13.0,18.0
+2025,24,Abu Dhabi Grand Prix,Pierre Gasly,Alpine,0.0,0.0015560122494355426,0.0,False,19.0,19.0
+2025,24,Abu Dhabi Grand Prix,Franco Colapinto,Alpine,0.0,0.0503312224162059,0.0,False,20.0,20.0
+2025,23,Qatar Grand Prix,Max Verstappen,Red Bull Racing,1.0,-0.06919102038048172,2.0,True,3.0,1.0
+2025,23,Qatar Grand Prix,Pierre Gasly,Alpine,0.0,-0.046842598930682454,-7.0,True,9.0,16.0
+2025,23,Qatar Grand Prix,Kimi Antonelli,Mercedes,1.0,-0.035579860286885104,0.0,True,5.0,5.0
+2025,23,Qatar Grand Prix,Fernando Alonso,Aston Martin,2.0,-0.10450924073383316,1.0,True,8.0,7.0
+2025,23,Qatar Grand Prix,Charles Leclerc,Ferrari,0.0,-0.07277761199091128,2.0,True,10.0,8.0
+2025,23,Qatar Grand Prix,Lance Stroll,Aston Martin,-1.0,-0.08451048501060107,1.0,True,18.0,17.0
+2025,23,Qatar Grand Prix,Yuki Tsunoda,Red Bull Racing,-1.0,-0.09505873376513355,5.0,True,15.0,10.0
+2025,23,Qatar Grand Prix,Alexander Albon,Williams,-3.0,-0.0896911390688062,3.0,True,14.0,11.0
+2025,23,Qatar Grand Prix,Nico Hulkenberg,Kick Sauber,0.0,0.0,-9.0,True,11.0,20.0
+2025,23,Qatar Grand Prix,Liam Lawson,Racing Bulls,-1.0,-0.0971660958323434,3.0,True,12.0,9.0
+2025,23,Qatar Grand Prix,Esteban Ocon,Haas F1 Team,1.0,-0.04944079221418729,1.0,True,16.0,15.0
+2025,23,Qatar Grand Prix,Lando Norris,McLaren,-1.0,0.023863282205375223,-2.0,True,2.0,4.0
+2025,23,Qatar Grand Prix,Franco Colapinto,Alpine,0.0,-0.05385348639298643,6.0,True,20.0,14.0
+2025,23,Qatar Grand Prix,Lewis Hamilton,Ferrari,3.0,-0.0600836752687445,5.0,True,17.0,12.0
+2025,23,Qatar Grand Prix,Gabriel Bortoleto,Kick Sauber,1.0,-0.053324968632370344,6.0,True,19.0,13.0
+2025,23,Qatar Grand Prix,Carlos Sainz,Williams,2.0,-0.06759691749465824,4.0,True,7.0,3.0
+2025,23,Qatar Grand Prix,Isack Hadjar,Racing Bulls,-2.0,-0.08197989851253107,-12.0,True,6.0,18.0
+2025,23,Qatar Grand Prix,George Russell,Mercedes,-3.0,-0.08629482179795676,-2.0,True,4.0,6.0
+2025,23,Qatar Grand Prix,Oscar Piastri,McLaren,0.0,0.021310142497905683,-1.0,True,1.0,2.0
+2025,23,Qatar Grand Prix,Oliver Bearman,Haas F1 Team,1.0,0.005746703516952872,-6.0,True,13.0,19.0
+2025,22,Las Vegas Grand Prix,Max Verstappen,Red Bull Racing,1.0,-0.05062820120005249,1.0,True,2.0,1.0
+2025,22,Las Vegas Grand Prix,George Russell,Mercedes,2.0,-0.04101603987760434,2.0,True,4.0,2.0
+2025,22,Las Vegas Grand Prix,Kimi Antonelli,Mercedes,3.0,-0.07379326318136811,14.0,True,17.0,3.0
+2025,22,Las Vegas Grand Prix,Charles Leclerc,Ferrari,0.0,-0.024887753321532795,5.0,True,9.0,4.0
+2025,22,Las Vegas Grand Prix,Carlos Sainz,Williams,-1.0,-0.06498570854809663,-2.0,True,3.0,5.0
+2025,22,Las Vegas Grand Prix,Isack Hadjar,Racing Bulls,3.0,-0.07469676567656608,2.0,True,8.0,6.0
+2025,22,Las Vegas Grand Prix,Nico Hulkenberg,Kick Sauber,0.0,-0.009563601690545051,4.0,True,11.0,7.0
+2025,22,Las Vegas Grand Prix,Lewis Hamilton,Ferrari,6.0,-0.048018297745511536,11.0,True,19.0,8.0
+2025,22,Las Vegas Grand Prix,Esteban Ocon,Haas F1 Team,1.0,-0.015917531696480757,4.0,True,13.0,9.0
+2025,22,Las Vegas Grand Prix,Oliver Bearman,Haas F1 Team,6.0,-0.0792922782971656,4.0,True,14.0,10.0
+2025,22,Las Vegas Grand Prix,Fernando Alonso,Aston Martin,-3.0,-0.020625068870524788,-4.0,True,7.0,11.0
+2025,22,Las Vegas Grand Prix,Yuki Tsunoda,Red Bull Racing,2.0,-0.004314017295020157,8.0,True,20.0,12.0
+2025,22,Las Vegas Grand Prix,Pierre Gasly,Alpine,-7.0,-0.03929468073245472,-3.0,True,10.0,13.0
+2025,22,Las Vegas Grand Prix,Liam Lawson,Racing Bulls,0.0,-0.018778206723185663,-8.0,True,6.0,14.0
+2025,22,Las Vegas Grand Prix,Franco Colapinto,Alpine,-1.0,-0.040027094122042396,0.0,True,15.0,15.0
+2025,22,Las Vegas Grand Prix,Alexander Albon,Williams,1.0,-0.09349255441007367,0.0,True,16.0,16.0
+2025,22,Las Vegas Grand Prix,Gabriel Bortoleto,Kick Sauber,-1.0,0.0,1.0,True,18.0,17.0
+2025,22,Las Vegas Grand Prix,Lance Stroll,Aston Martin,0.0,0.0,-6.0,True,12.0,18.0
+2025,22,Las Vegas Grand Prix,Lando Norris,McLaren,-2.0,-0.006395095611037622,-18.0,True,1.0,19.0
+2025,22,Las Vegas Grand Prix,Oscar Piastri,McLaren,-2.0,-0.0798120709205246,-15.0,True,5.0,20.0
+2025,21,São Paulo Grand Prix,Max Verstappen,Red Bull Racing,1.0,0.0695010485539712,16.0,True,19.0,3.0
+2025,21,São Paulo Grand Prix,Pierre Gasly,Alpine,1.0,0.011571488908786601,-1.0,True,9.0,10.0
+2025,21,São Paulo Grand Prix,Kimi Antonelli,Mercedes,0.0,-0.0031906132641989706,0.0,True,2.0,2.0
+2025,21,São Paulo Grand Prix,Fernando Alonso,Aston Martin,1.0,0.05902820874470926,-3.0,True,11.0,14.0
+2025,21,São Paulo Grand Prix,Charles Leclerc,Ferrari,0.0,0.0,-16.0,True,3.0,19.0
+2025,21,São Paulo Grand Prix,Lance Stroll,Aston Martin,-1.0,0.07664748707571356,-2.0,True,14.0,16.0
+2025,21,São Paulo Grand Prix,Yuki Tsunoda,Red Bull Racing,3.0,0.0415729226525678,0.0,True,17.0,17.0
+2025,21,São Paulo Grand Prix,Alexander Albon,Williams,1.0,0.08418254551926053,1.0,True,12.0,11.0
+2025,21,São Paulo Grand Prix,Nico Hulkenberg,Kick Sauber,-2.0,0.027099749500407454,1.0,True,10.0,9.0
+2025,21,São Paulo Grand Prix,Liam Lawson,Racing Bulls,1.0,0.011712892372128653,0.0,True,7.0,7.0
+2025,21,São Paulo Grand Prix,Esteban Ocon,Haas F1 Team,1.0,0.03125103492744813,8.0,True,20.0,12.0
+2025,21,São Paulo Grand Prix,Lando Norris,McLaren,0.0,-0.003204551949908056,0.0,True,1.0,1.0
+2025,21,São Paulo Grand Prix,Franco Colapinto,Alpine,0.0,0.03843439379742609,1.0,True,16.0,15.0
+2025,21,São Paulo Grand Prix,Lewis Hamilton,Ferrari,-4.0,0.061094166666666484,-5.0,True,13.0,18.0
+2025,21,São Paulo Grand Prix,Gabriel Bortoleto,Kick Sauber,0.0,0.0,-2.0,True,18.0,20.0
+2025,21,São Paulo Grand Prix,Carlos Sainz,Williams,2.0,0.01912222806095782,2.0,True,15.0,13.0
+2025,21,São Paulo Grand Prix,Isack Hadjar,Racing Bulls,0.0,0.02756390159038774,-3.0,True,5.0,8.0
+2025,21,São Paulo Grand Prix,George Russell,Mercedes,-1.0,0.06011447725612726,2.0,True,6.0,4.0
+2025,21,São Paulo Grand Prix,Oscar Piastri,McLaren,0.0,0.045858193559959314,-1.0,True,4.0,5.0
+2025,21,São Paulo Grand Prix,Oliver Bearman,Haas F1 Team,-1.0,-0.024491754471169806,2.0,True,8.0,6.0
+2025,20,Mexico City Grand Prix,Max Verstappen,Red Bull Racing,1.0,-0.00277583825568023,2.0,True,5.0,3.0
+2025,20,Mexico City Grand Prix,Pierre Gasly,Alpine,3.0,-0.0056024332684903415,3.0,True,18.0,15.0
+2025,20,Mexico City Grand Prix,Kimi Antonelli,Mercedes,-1.0,0.004413176352707085,0.0,True,6.0,6.0
+2025,20,Mexico City Grand Prix,Fernando Alonso,Aston Martin,-2.0,0.05967560566813991,-4.0,True,14.0,18.0
+2025,20,Mexico City Grand Prix,Charles Leclerc,Ferrari,0.0,-0.0017289214408101503,0.0,True,2.0,2.0
+2025,20,Mexico City Grand Prix,Lance Stroll,Aston Martin,0.0,0.0016037376441500795,5.0,True,19.0,14.0
+2025,20,Mexico City Grand Prix,Yuki Tsunoda,Red Bull Racing,2.0,0.017499271186061205,-1.0,True,10.0,11.0
+2025,20,Mexico City Grand Prix,Alexander Albon,Williams,-1.0,0.03842806162909173,5.0,True,17.0,12.0
+2025,20,Mexico City Grand Prix,Nico Hulkenberg,Kick Sauber,-4.0,-0.04938438735177925,-6.0,True,13.0,19.0
+2025,20,Mexico City Grand Prix,Liam Lawson,Racing Bulls,1.0,0.0,-5.0,True,15.0,20.0
+2025,20,Mexico City Grand Prix,Esteban Ocon,Haas F1 Team,1.0,-0.02743357933579368,2.0,True,11.0,9.0
+2025,20,Mexico City Grand Prix,Lando Norris,McLaren,0.0,0.008428881877311972,0.0,True,1.0,1.0
+2025,20,Mexico City Grand Prix,Franco Colapinto,Alpine,0.0,0.03448549612621721,4.0,True,20.0,16.0
+2025,20,Mexico City Grand Prix,Lewis Hamilton,Ferrari,0.0,0.019325023135640215,-5.0,True,3.0,8.0
+2025,20,Mexico City Grand Prix,Gabriel Bortoleto,Kick Sauber,3.0,0.024118622110995917,6.0,True,16.0,10.0
+2025,20,Mexico City Grand Prix,Carlos Sainz,Williams,0.0,-0.01616269384841095,-5.0,True,12.0,17.0
+2025,20,Mexico City Grand Prix,Isack Hadjar,Racing Bulls,-3.0,0.01581230766031901,-5.0,True,8.0,13.0
+2025,20,Mexico City Grand Prix,George Russell,Mercedes,-1.0,0.037173242220052555,-3.0,True,4.0,7.0
+2025,20,Mexico City Grand Prix,Oscar Piastri,McLaren,-2.0,0.014579550964989927,2.0,True,7.0,5.0
+2025,20,Mexico City Grand Prix,Oliver Bearman,Haas F1 Team,3.0,0.012716902622186083,5.0,True,9.0,4.0
+2025,19,United States Grand Prix,Max Verstappen,Red Bull Racing,0.0,0.018755014927583476,0.0,True,1.0,1.0
+2025,19,United States Grand Prix,Pierre Gasly,Alpine,0.0,0.01742420048778904,-5.0,True,14.0,19.0
+2025,19,United States Grand Prix,Kimi Antonelli,Mercedes,0.0,-0.08821764667747174,-6.0,True,7.0,13.0
+2025,19,United States Grand Prix,Fernando Alonso,Aston Martin,-2.0,-0.038330269631964314,0.0,True,10.0,10.0
+2025,19,United States Grand Prix,Charles Leclerc,Ferrari,1.0,-0.005415786320035728,0.0,True,3.0,3.0
+2025,19,United States Grand Prix,Lance Stroll,Aston Martin,1.0,-0.04216922273706056,7.0,True,19.0,12.0
+2025,19,United States Grand Prix,Yuki Tsunoda,Red Bull Racing,3.0,-0.009663363678040085,6.0,True,13.0,7.0
+2025,19,United States Grand Prix,Alexander Albon,Williams,-2.0,0.0009031732201590919,4.0,True,18.0,14.0
+2025,19,United States Grand Prix,Nico Hulkenberg,Kick Sauber,0.0,-0.022605343029538007,3.0,True,11.0,8.0
+2025,19,United States Grand Prix,Liam Lawson,Racing Bulls,-1.0,-0.01900428764565677,1.0,True,12.0,11.0
+2025,19,United States Grand Prix,Esteban Ocon,Haas F1 Team,2.0,-0.03709084652828037,2.0,True,17.0,15.0
+2025,19,United States Grand Prix,Lando Norris,McLaren,-1.0,-0.02689040016805048,0.0,True,2.0,2.0
+2025,19,United States Grand Prix,Franco Colapinto,Alpine,-2.0,0.013744103409544248,-2.0,True,15.0,17.0
+2025,19,United States Grand Prix,Lewis Hamilton,Ferrari,1.0,0.029131851514828614,1.0,True,5.0,4.0
+2025,19,United States Grand Prix,Gabriel Bortoleto,Kick Sauber,0.0,0.05004122269182711,-2.0,True,16.0,18.0
+2025,19,United States Grand Prix,Carlos Sainz,Williams,0.0,0.0,-11.0,True,9.0,20.0
+2025,19,United States Grand Prix,Isack Hadjar,Racing Bulls,1.0,-0.02754197393411533,4.0,True,20.0,16.0
+2025,19,United States Grand Prix,George Russell,Mercedes,-2.0,0.009800464980757734,-2.0,True,4.0,6.0
+2025,19,United States Grand Prix,Oscar Piastri,McLaren,1.0,-0.016503485801733275,1.0,True,6.0,5.0
+2025,19,United States Grand Prix,Oliver Bearman,Haas F1 Team,0.0,-0.03423387824495077,-1.0,True,8.0,9.0
+2025,18,Singapore Grand Prix,George Russell,Mercedes,0.0,-0.004533309046452307,0.0,False,1.0,1.0
+2025,18,Singapore Grand Prix,Max Verstappen,Red Bull Racing,0.0,-0.011415367788409712,0.0,False,2.0,2.0
+2025,18,Singapore Grand Prix,Lando Norris,McLaren,2.0,-0.01611944453585141,2.0,False,5.0,3.0
+2025,18,Singapore Grand Prix,Oscar Piastri,McLaren,-1.0,-0.026356886999544225,-1.0,False,3.0,4.0
+2025,18,Singapore Grand Prix,Kimi Antonelli,Mercedes,-2.0,-0.014291371570764433,-1.0,False,4.0,5.0
+2025,18,Singapore Grand Prix,Charles Leclerc,Ferrari,2.0,0.01928710551297828,1.0,False,7.0,6.0
+2025,18,Singapore Grand Prix,Fernando Alonso,Aston Martin,1.0,-0.08210694681740813,3.0,False,10.0,7.0
+2025,18,Singapore Grand Prix,Lewis Hamilton,Ferrari,-1.0,0.16782679919188997,-2.0,False,6.0,8.0
+2025,18,Singapore Grand Prix,Oliver Bearman,Haas F1 Team,-1.0,-0.05889862779927094,0.0,False,9.0,9.0
+2025,18,Singapore Grand Prix,Carlos Sainz,Williams,0.0,0.030795679437814028,8.0,False,18.0,10.0
+2025,18,Singapore Grand Prix,Isack Hadjar,Racing Bulls,0.0,-0.01913813293019295,-3.0,False,8.0,11.0
+2025,18,Singapore Grand Prix,Yuki Tsunoda,Red Bull Racing,-3.0,-0.016115202406614727,1.0,False,13.0,12.0
+2025,18,Singapore Grand Prix,Lance Stroll,Aston Martin,1.0,-0.01861543376332416,2.0,False,15.0,13.0
+2025,18,Singapore Grand Prix,Alexander Albon,Williams,0.0,-0.009264150098618104,6.0,False,20.0,14.0
+2025,18,Singapore Grand Prix,Liam Lawson,Racing Bulls,0.0,0.01829575414108705,-3.0,False,12.0,15.0
+2025,18,Singapore Grand Prix,Franco Colapinto,Alpine,3.0,0.014847775355492492,0.0,False,16.0,16.0
+2025,18,Singapore Grand Prix,Gabriel Bortoleto,Kick Sauber,-1.0,0.023063993770280945,-3.0,False,14.0,17.0
+2025,18,Singapore Grand Prix,Esteban Ocon,Haas F1 Team,0.0,-0.005506111881800682,-1.0,False,17.0,18.0
+2025,18,Singapore Grand Prix,Pierre Gasly,Alpine,0.0,0.09708058710793045,0.0,False,19.0,19.0
+2025,18,Singapore Grand Prix,Nico Hulkenberg,Kick Sauber,0.0,0.05246097229384236,-9.0,False,11.0,20.0
+2025,17,Azerbaijan Grand Prix,Max Verstappen,Red Bull Racing,0.0,-0.017350652741514205,0.0,True,1.0,1.0
+2025,17,Azerbaijan Grand Prix,George Russell,Mercedes,0.0,-0.04788879342089081,3.0,True,5.0,2.0
+2025,17,Azerbaijan Grand Prix,Carlos Sainz,Williams,0.0,0.00673781291172559,-1.0,True,2.0,3.0
+2025,17,Azerbaijan Grand Prix,Kimi Antonelli,Mercedes,0.0,-0.06177728492789429,0.0,True,4.0,4.0
+2025,17,Azerbaijan Grand Prix,Liam Lawson,Racing Bulls,0.0,-0.05226837944664142,-2.0,True,3.0,5.0
+2025,17,Azerbaijan Grand Prix,Yuki Tsunoda,Red Bull Racing,0.0,-0.051347933884297335,0.0,True,6.0,6.0
+2025,17,Azerbaijan Grand Prix,Lando Norris,McLaren,-1.0,-0.02316208216381535,0.0,True,7.0,7.0
+2025,17,Azerbaijan Grand Prix,Lewis Hamilton,Ferrari,2.0,0.0018251057277069655,4.0,True,12.0,8.0
+2025,17,Azerbaijan Grand Prix,Charles Leclerc,Ferrari,1.0,-0.061455078281812674,1.0,True,10.0,9.0
+2025,17,Azerbaijan Grand Prix,Isack Hadjar,Racing Bulls,1.0,0.015832549019608195,-2.0,True,8.0,10.0
+2025,17,Azerbaijan Grand Prix,Gabriel Bortoleto,Kick Sauber,1.0,-0.08751028171910258,2.0,True,13.0,11.0
+2025,17,Azerbaijan Grand Prix,Oliver Bearman,Haas F1 Team,0.0,-0.014751031817088795,3.0,True,15.0,12.0
+2025,17,Azerbaijan Grand Prix,Alexander Albon,Williams,0.0,-0.10872025129342032,6.0,True,19.0,13.0
+2025,17,Azerbaijan Grand Prix,Esteban Ocon,Haas F1 Team,2.0,-0.08195571230342202,6.0,True,20.0,14.0
+2025,17,Azerbaijan Grand Prix,Fernando Alonso,Aston Martin,0.0,-0.08068989191315475,-4.0,True,11.0,15.0
+2025,17,Azerbaijan Grand Prix,Nico Hulkenberg,Kick Sauber,0.0,0.027933360857872343,1.0,True,17.0,16.0
+2025,17,Azerbaijan Grand Prix,Lance Stroll,Aston Martin,1.0,0.004954875397367278,-3.0,True,14.0,17.0
+2025,17,Azerbaijan Grand Prix,Pierre Gasly,Alpine,2.0,-0.009269972451791543,0.0,True,18.0,18.0
+2025,17,Azerbaijan Grand Prix,Franco Colapinto,Alpine,2.0,-0.05174848484848502,-3.0,True,16.0,19.0
+2025,17,Azerbaijan Grand Prix,Oscar Piastri,McLaren,0.0,0.0,-11.0,True,9.0,20.0
+2025,16,Italian Grand Prix,Max Verstappen,Red Bull Racing,0.0,0.017083673469389247,0.0,False,1.0,1.0
+2025,16,Italian Grand Prix,Lando Norris,McLaren,0.0,-0.004652279004726374,0.0,False,2.0,2.0
+2025,16,Italian Grand Prix,Oscar Piastri,McLaren,0.0,-0.02758582047598149,0.0,False,3.0,3.0
+2025,16,Italian Grand Prix,Charles Leclerc,Ferrari,0.0,-0.018824103071894884,0.0,False,4.0,4.0
+2025,16,Italian Grand Prix,George Russell,Mercedes,0.0,-0.04070961538461253,0.0,False,5.0,5.0
+2025,16,Italian Grand Prix,Lewis Hamilton,Ferrari,2.0,0.002076494041835799,4.0,False,10.0,6.0
+2025,16,Italian Grand Prix,Alexander Albon,Williams,1.0,-0.019124753404794723,7.0,False,14.0,7.0
+2025,16,Italian Grand Prix,Gabriel Bortoleto,Kick Sauber,0.0,-0.07567583625012642,-1.0,False,7.0,8.0
+2025,16,Italian Grand Prix,Kimi Antonelli,Mercedes,-4.0,-0.04336913805057537,-3.0,False,6.0,9.0
+2025,16,Italian Grand Prix,Isack Hadjar,Racing Bulls,1.0,-0.014966482284347993,9.0,False,19.0,10.0
+2025,16,Italian Grand Prix,Carlos Sainz,Williams,1.0,-0.02565624889317083,2.0,False,13.0,11.0
+2025,16,Italian Grand Prix,Oliver Bearman,Haas F1 Team,0.0,-0.0705250679828543,-1.0,False,11.0,12.0
+2025,16,Italian Grand Prix,Yuki Tsunoda,Red Bull Racing,0.0,-0.06622912619473151,-4.0,False,9.0,13.0
+2025,16,Italian Grand Prix,Liam Lawson,Racing Bulls,3.0,-0.042945161200304276,4.0,False,18.0,14.0
+2025,16,Italian Grand Prix,Esteban Ocon,Haas F1 Team,1.0,-0.04447010204081748,0.0,False,15.0,15.0
+2025,16,Italian Grand Prix,Pierre Gasly,Alpine,1.0,-0.03972199404282204,4.0,False,20.0,16.0
+2025,16,Italian Grand Prix,Franco Colapinto,Alpine,0.0,0.006669709066784295,0.0,False,17.0,17.0
+2025,16,Italian Grand Prix,Lance Stroll,Aston Martin,0.0,-0.030555492255427363,-2.0,False,16.0,18.0
+2025,16,Italian Grand Prix,Fernando Alonso,Aston Martin,2.0,-0.040443852049316685,-11.0,False,8.0,19.0
+2025,16,Italian Grand Prix,Nico Hulkenberg,Kick Sauber,0.0,0.0,-8.0,False,12.0,20.0
+2025,15,Dutch Grand Prix,Max Verstappen,Red Bull Racing,1.0,-0.027189945336086017,1.0,True,3.0,2.0
+2025,15,Dutch Grand Prix,Pierre Gasly,Alpine,0.0,-0.000698191156766921,-3.0,True,14.0,17.0
+2025,15,Dutch Grand Prix,Kimi Antonelli,Mercedes,-1.0,-0.05730447037231122,-5.0,True,11.0,16.0
+2025,15,Dutch Grand Prix,Fernando Alonso,Aston Martin,-3.0,-0.01164134961778431,2.0,True,10.0,8.0
+2025,15,Dutch Grand Prix,Charles Leclerc,Ferrari,1.0,-0.034354709672396594,-13.0,True,6.0,19.0
+2025,15,Dutch Grand Prix,Lance Stroll,Aston Martin,0.0,0.008145477018659598,12.0,True,19.0,7.0
+2025,15,Dutch Grand Prix,Yuki Tsunoda,Red Bull Racing,1.0,-0.0015186663128682186,3.0,True,12.0,9.0
+2025,15,Dutch Grand Prix,Alexander Albon,Williams,5.0,-0.012421765881772073,10.0,True,15.0,5.0
+2025,15,Dutch Grand Prix,Nico Hulkenberg,Kick Sauber,0.0,-0.020884651302751276,3.0,True,17.0,14.0
+2025,15,Dutch Grand Prix,Liam Lawson,Racing Bulls,0.0,0.012941817791224905,-4.0,True,8.0,12.0
+2025,15,Dutch Grand Prix,Esteban Ocon,Haas F1 Team,2.0,-0.008455393591165386,8.0,True,18.0,10.0
+2025,15,Dutch Grand Prix,Lando Norris,McLaren,-1.0,-0.015281955521641709,-16.0,True,2.0,18.0
+2025,15,Dutch Grand Prix,Franco Colapinto,Alpine,1.0,0.013938916032270088,5.0,True,16.0,11.0
+2025,15,Dutch Grand Prix,Lewis Hamilton,Ferrari,0.0,0.008064935064935278,-13.0,True,7.0,20.0
+2025,15,Dutch Grand Prix,Gabriel Bortoleto,Kick Sauber,-5.0,0.011747951194617145,-2.0,True,13.0,15.0
+2025,15,Dutch Grand Prix,Carlos Sainz,Williams,0.0,0.0043559345228710656,-4.0,True,9.0,13.0
+2025,15,Dutch Grand Prix,Isack Hadjar,Racing Bulls,0.0,-0.01828501872659248,1.0,True,4.0,3.0
+2025,15,Dutch Grand Prix,George Russell,Mercedes,-1.0,-0.006662119184816755,1.0,True,5.0,4.0
+2025,15,Dutch Grand Prix,Oscar Piastri,McLaren,0.0,-0.009057989597030787,0.0,True,1.0,1.0
+2025,15,Dutch Grand Prix,Oliver Bearman,Haas F1 Team,0.0,0.0019903722481647416,14.0,True,20.0,6.0
+2026,1,Australian Grand Prix,Lando Norris,McLaren,0.0,-0.0796102774717045,1.0,True,6.0,5.0
+2026,1,Australian Grand Prix,Pierre Gasly,Alpine,5.0,-0.009558783303963116,4.0,True,14.0,10.0
+2026,1,Australian Grand Prix,Sergio Perez,Cadillac,-1.0,0.06325391719414616,2.0,True,18.0,16.0
+2026,1,Australian Grand Prix,Kimi Antonelli,Mercedes,-5.0,-0.03849008276384228,0.0,True,2.0,2.0
+2026,1,Australian Grand Prix,Fernando Alonso,Aston Martin,7.0,0.0007539089055038395,-1.0,True,17.0,18.0
+2026,1,Australian Grand Prix,Charles Leclerc,Ferrari,3.0,-0.042349621494826475,1.0,True,4.0,3.0
+2026,1,Australian Grand Prix,Lance Stroll,Aston Martin,2.0,0.1378867403314893,5.0,True,22.0,17.0
+2026,1,Australian Grand Prix,Alexander Albon,Williams,3.0,-0.026517053322256172,3.0,True,15.0,12.0
+2026,1,Australian Grand Prix,Nico Hulkenberg,Audi,0.0,0.0,-11.0,True,11.0,22.0
+2026,1,Australian Grand Prix,Max Verstappen,Red Bull Racing,4.0,-0.009416916379265573,14.0,True,20.0,6.0
+2026,1,Australian Grand Prix,Liam Lawson,Racing Bulls,-10.0,-0.05803761266953133,-5.0,True,8.0,13.0
+2026,1,Australian Grand Prix,Esteban Ocon,Haas F1 Team,5.0,-0.012459213329474422,2.0,True,13.0,11.0
+2026,1,Australian Grand Prix,Arvid Lindblad,Racing Bulls,4.0,0.0022904260068448055,1.0,True,9.0,8.0
+2026,1,Australian Grand Prix,Franco Colapinto,Alpine,-1.0,0.014731573432944768,2.0,True,16.0,14.0
+2026,1,Australian Grand Prix,Lewis Hamilton,Ferrari,4.0,-0.04416423594181146,3.0,True,7.0,4.0
+2026,1,Australian Grand Prix,Gabriel Bortoleto,Audi,-1.0,-0.020438608048449016,1.0,True,10.0,9.0
+2026,1,Australian Grand Prix,Carlos Sainz,Williams,8.0,0.003847789036015571,6.0,True,21.0,15.0
+2026,1,Australian Grand Prix,Isack Hadjar,Red Bull Racing,-1.0,-0.05691666666667045,-17.0,True,3.0,20.0
+2026,1,Australian Grand Prix,George Russell,Mercedes,-1.0,-0.030264763565045774,0.0,True,1.0,1.0
+2026,1,Australian Grand Prix,Valtteri Bottas,Cadillac,4.0,0.16057527975584862,0.0,True,19.0,19.0
+2026,1,Australian Grand Prix,Oliver Bearman,Haas F1 Team,-2.0,-0.01301641344017812,5.0,True,12.0,7.0
+2026,2,Chinese Grand Prix,Lando Norris,McLaren,0.0,0.0,-14.0,True,6.0,20.0
+2026,2,Chinese Grand Prix,Pierre Gasly,Alpine,2.0,-0.06226453566192943,1.0,True,7.0,6.0
+2026,2,Chinese Grand Prix,Sergio Perez,Cadillac,4.0,-0.014253012593895246,6.0,True,21.0,15.0
+2026,2,Chinese Grand Prix,Kimi Antonelli,Mercedes,-1.0,-0.04381889221747774,0.0,True,1.0,1.0
+2026,2,Chinese Grand Prix,Fernando Alonso,Aston Martin,8.0,-0.07829374844643404,1.0,True,18.0,17.0
+2026,2,Chinese Grand Prix,Charles Leclerc,Ferrari,1.0,-0.03928618777487439,0.0,True,4.0,4.0
+2026,2,Chinese Grand Prix,Lance Stroll,Aston Martin,4.0,-0.1483809523809528,2.0,True,20.0,18.0
+2026,2,Chinese Grand Prix,Alexander Albon,Williams,0.0,0.0,0.0,True,22.0,22.0
+2026,2,Chinese Grand Prix,Nico Hulkenberg,Audi,-4.0,0.0042439358122744,0.0,True,11.0,11.0
+2026,2,Chinese Grand Prix,Max Verstappen,Red Bull Racing,-5.0,-0.0817272741639793,-8.0,True,8.0,16.0
+2026,2,Chinese Grand Prix,Liam Lawson,Racing Bulls,7.0,-0.059390664193396565,7.0,True,14.0,7.0
+2026,2,Chinese Grand Prix,Esteban Ocon,Haas F1 Team,4.0,0.01844888439457292,-1.0,True,13.0,14.0
+2026,2,Chinese Grand Prix,Arvid Lindblad,Racing Bulls,7.0,0.034590459596909665,3.0,True,15.0,12.0
+2026,2,Chinese Grand Prix,Franco Colapinto,Alpine,6.0,0.030717262206884397,2.0,True,12.0,10.0
+2026,2,Chinese Grand Prix,Lewis Hamilton,Ferrari,2.0,-0.046419210912104006,0.0,True,3.0,3.0
+2026,2,Chinese Grand Prix,Gabriel Bortoleto,Audi,0.0,0.0,-5.0,True,16.0,21.0
+2026,2,Chinese Grand Prix,Carlos Sainz,Williams,6.0,-0.038358600917430014,8.0,True,17.0,9.0
+2026,2,Chinese Grand Prix,Isack Hadjar,Red Bull Racing,-9.0,-0.03444616913225924,1.0,True,9.0,8.0
+2026,2,Chinese Grand Prix,George Russell,Mercedes,-2.0,-0.05602257632736506,0.0,True,2.0,2.0
+2026,2,Chinese Grand Prix,Valtteri Bottas,Cadillac,5.0,-0.03987228451499361,6.0,True,19.0,13.0
+2026,2,Chinese Grand Prix,Oscar Piastri,McLaren,0.0,0.0,-14.0,True,5.0,19.0
+2026,2,Chinese Grand Prix,Oliver Bearman,Haas F1 Team,-2.0,-0.0625539422525327,5.0,True,10.0,5.0
