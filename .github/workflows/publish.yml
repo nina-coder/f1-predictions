@@ -1,0 +1,55 @@
+name: Publish Notebook to HTML
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'notebooks/**'
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt nbconvert
+
+      - name: Find most recently modified notebook
+        id: notebook
+        run: |
+          NOTEBOOK=$(ls -t notebooks/*.ipynb | head -1)
+          echo "path=$NOTEBOOK" >> "$GITHUB_OUTPUT"
+          echo "Using notebook: $NOTEBOOK"
+
+      - name: Convert notebook to HTML
+        env:
+          NOTEBOOK_PATH: ${{ steps.notebook.outputs.path }}
+        run: |
+          jupyter nbconvert \
+            --to html \
+            --no-input \
+            --template-file docs/custom.tpl \
+            "$NOTEBOOK_PATH" \
+            --output-dir docs \
+            --output index.html
+
+      - name: Commit and push
+        run: |
+          git config user.name "Nina Rivera"
+          git config user.email "55598663+nina-coder@users.noreply.github.com"
+          git add docs/index.html
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Update docs/index.html from notebook"
+            git push
+          fi
