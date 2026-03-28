@@ -61,7 +61,7 @@ jupyter lab notebooks/
 - [x] Japan GP predictions (Round 3) — v1.0+Q
 - [x] Practice + qualifying live integration
 - [x] F1 Fantasy optimization with actual prices
+- [x] Season results scoreboard + per-race archive pages
 - [ ] Post-race accuracy analysis + model update
-- [ ] Season-long accuracy tracking
 - [ ] Overtake probability modeling
 - [ ] Enhanced safety car pit window timing
