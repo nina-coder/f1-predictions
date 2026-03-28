@@ -7935,9 +7935,9 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="%F0%9F%8F%8E%EF%B8%8F-Nina's-F1-Predictions:-2026-Japanese-Grand-Prix-(Round-3)">🏎️ Nina's F1 Predictions: 2026 Japanese Grand Prix (Round 3)<a class="anchor-link" href="#%F0%9F%8F%8E%EF%B8%8F-Nina's-F1-Predictions:-2026-Japanese-Grand-Prix-(Round-3)">¶</a></h1><h2 id="Suzuka-Circuit-%E2%80%94-March-27-29,-2026">Suzuka Circuit — March 27-29, 2026<a class="anchor-link" href="#Suzuka-Circuit-%E2%80%94-March-27-29,-2026">¶</a></h2><p><strong>Model version:</strong> v1.0 (Complete race engineer model)<br/>
+<h1 id="%F0%9F%8F%8E%EF%B8%8F-Nina's-F1-Predictions:-2026-Japanese-Grand-Prix-(Round-3)">🏎️ Nina's F1 Predictions: 2026 Japanese Grand Prix (Round 3)<a class="anchor-link" href="#%F0%9F%8F%8E%EF%B8%8F-Nina's-F1-Predictions:-2026-Japanese-Grand-Prix-(Round-3)">¶</a></h1><h2 id="Suzuka-Circuit-%E2%80%94-March-27-29,-2026">Suzuka Circuit — March 27-29, 2026<a class="anchor-link" href="#Suzuka-Circuit-%E2%80%94-March-27-29,-2026">¶</a></h2><p><strong>Model version:</strong> v1.0+Q (Post-qualifying, HIGH confidence)<br/>
 <strong>Data:</strong> 72 races (2023-2026), 1,442 results + lap telemetry + weather<br/>
-<strong>Last updated:</strong> March 27, 2026 at 11:00 PM MT</p>
+<strong>Last updated:</strong> March 28, 2026 at 11:00 PM MT</p>
 <h3 id="What-This-Is">What This Is<a class="anchor-link" href="#What-This-Is">¶</a></h3><p>A machine learning model that predicts Formula 1 race results and optimizes F1 Fantasy lineups. The model analyzes 24 different factors — the same kinds of data a race engineer would consider when building a race strategy — and runs 10,000 simulated races to estimate each driver's probability of finishing on the podium, in the points, or beating their teammate.</p>
 <p>The 2026 season introduced <strong>massive regulation changes</strong> — new power units (50/50 electric/ICE), active aerodynamics that replace DRS, smaller and lighter cars, and 100% sustainable fuels. The entire competitive order has been reshuffled. Mercedes went from struggling to dominant. McLaren went from champions to backmarkers. Red Bull went from winning everything to Tier 4. This model accounts for that by weighting 2026 data 10x more heavily than historical data.</p>
 <h3 id="The-24-Features">The 24 Features<a class="anchor-link" href="#The-24-Features">¶</a></h3><p>The model looks at every driver through these lenses:</p>
@@ -7983,7 +7983,6 @@ a.anchor-link {
 <li><strong>10,000 simulated races</strong> — each simulation adds realistic randomness (safety cars, incidents, mechanical failures) calibrated to the model's actual prediction error. This produces probabilities, not just a single prediction.</li>
 <li><strong>Honest validation</strong> — we use leave-one-out cross-validation on 2026 data. The accuracy we report (MAE 2.39 positions) is real — the model never saw the data it was tested on.</li>
 </ol>
-<p><strong>Important:</strong> Qualifying hasn't happened yet, so grid positions are estimated. After Saturday qualifying, these predictions will be re-run with actual grid positions — the single biggest accuracy improvement available.</p>
 </div>
 </div>
 </div>
