@@ -10,9 +10,11 @@ A machine learning model that predicts F1 race results using 24 features — the
 
 Built for the 2026 season, which introduced massive regulation changes (new power units, active aerodynamics, smaller cars, 100% sustainable fuel). The entire competitive order has been reshuffled, making historical data less reliable and current-season data critical.
 
-## Model v1.0 — 24 Features
+## Model v1.0+Q — 24 Features + Qualifying Integration
 
 The model uses a **two-model approach**: car pace (from 2026 data only) and driver skill (from all 72 races, measured relative to the car). This ensures 2025 patterns don't bleed into 2026 predictions.
+
+**Race weekend integration:** Practice (FP1/FP2/FP3) and qualifying data are pulled live via FastF1 and blended into the model. Car pace uses a 5-way blend (10% season + 15% FP1 + 20% FP2 + 20% FP3 + 35% qualifying). Qualifying provides actual grid positions (the #1 predictor) and live sector deltas. Simulations use position-dependent variance — front-row starters have less noise than the chaotic midfield pack.
 
 ### Features
 
@@ -58,17 +60,18 @@ The model uses a **two-model approach**: car pace (from 2026 data only) and driv
 | v0.7 | 21 | Suzuka sectors + safety car simulations |
 | v0.8 | 21 | 2026 data weighted 10x |
 | v0.9 | 22 | Honest validation + team change flag |
-| **v1.0** | **24** | **Tire strategy + complete race engineer model** |
+| v1.0 | 24 | Tire strategy + complete race engineer model |
+| **v1.0+Q** | **24** | **Actual qualifying grid + live sectors + 5-way car pace + position-dependent sims** |
 
-## 2026 Constructor Tiers (after Round 2)
+## 2026 Constructor Tiers (post-qualifying, Round 3 Japan)
 
-| Tier | Teams | Avg Finish | Speed |
-|------|-------|------------|-------|
-| 1 — Front-runners | Mercedes | P1.5 | 298 km/h |
-| 2 — Strong midfield | Ferrari | P3.5 | 296 km/h |
-| 3 — Midfield | Haas, Alpine, Racing Bulls | P9-10 | 291-295 km/h |
-| 4 — Lower midfield | Red Bull, Williams, Audi, Cadillac | P12-16 | 285-298 km/h |
-| 5 — Backmarkers | McLaren, Aston Martin | P16-18 | 279-282 km/h |
+| Tier | Teams | Qualifying Avg | Notes |
+|------|-------|---------------|-------|
+| 1 — Front-runners | Mercedes | P1.5 | Antonelli pole, Russell P2 |
+| 2 — Strong midfield | Ferrari, McLaren | P4-5 | McLaren surged from Tier 5 (season P16!) |
+| 3 — Midfield | Red Bull, Alpine, Audi, Racing Bulls | P9-12 | Verstappen only P11 (Q2 exit) |
+| 4 — Lower midfield | Haas, Williams | P15-17 | Bearman P18 despite strong race pace |
+| 5 — Backmarkers | Cadillac, Aston Martin | P19-22 | 3+ seconds off pole |
 
 ## F1 Fantasy
 
@@ -131,11 +134,11 @@ f1-predictions/
 ## Roadmap
 
 - [x] Japan GP predictions (Round 3) — v1.0
-- [ ] Post-qualifying update with actual grid positions (Saturday)
-- [ ] Post-race accuracy analysis (Sunday)
-- [ ] Practice session pace integration (Friday)
-- [ ] Round 4 (Miami) notebook
-- [ ] Actual F1 Fantasy driver prices
+- [x] Practice session pace integration (FP1 3/26, FP2 3/27, FP3 3/28)
+- [x] Actual F1 Fantasy driver prices
+- [x] Post-qualifying update with actual grid positions, live sectors, 5-way blend (3/28)
+- [ ] Post-race accuracy analysis (Sunday 3/29)
+- [ ] Round 4 notebook
 - [ ] Overtake probability modeling
 - [ ] Enhanced safety car pit window timing
 - [ ] Season-long accuracy tracking dashboard
