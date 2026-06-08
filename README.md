@@ -73,6 +73,8 @@ jupyter lab notebooks/
 - [x] Season results scoreboard + per-race archive pages
 - [x] Post-race accuracy analysis (Rounds 3-6)
 - [x] Reusable prediction library (`scripts/f1lib.py`) + one-command notebook generator
+- [x] Live pre-race mode + DNF promotion in simulations
+- [x] Race-day weather forecast input (Open-Meteo) with wet/dry probability blend
 - [ ] Overtake probability modeling
 - [ ] Enhanced safety car pit window timing
 - [ ] Track-difficulty weighting (Monaco/Canada accuracy is the weak spot)
