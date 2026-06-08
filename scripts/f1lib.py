@@ -204,11 +204,15 @@ def train(feat_df, target_seq):
     return model, loo_mae, residual_std
 
 
-def weekend(year, event, df, season_speed):
-    """Pull a completed weekend's qualifying for grid + live sector deltas + blended
-    car pace, plus race weather. Falls back gracefully if practice is missing.
+def weekend(year, event, df, season_speed, pre_race=False):
+    """Pull a weekend's qualifying for grid + live sector deltas + blended car pace.
 
-    Returns dict: grid, sector_s1/2/3, car_pace, car_speed, temp, humidity, rain.
+    Retrospective mode (default) also loads the race for actual weather + results.
+    pre_race=True is for a Saturday run before the race has happened: it skips the
+    race session, takes conditions from qualifying, and returns race_results=None.
+
+    Returns dict: grid, sector_s1/2/3, car_pace, car_speed, temp, humidity, rain,
+    race_results (None if pre_race), quali_results.
     """
     season_pace_dict = season_speed['pace']
     season_spd_dict = season_speed['speed']
@@ -254,17 +258,23 @@ def weekend(year, event, df, season_speed):
             if any(team_map.get(d) == t for d in qspd) else s_spd
         car_speed[t] = s_spd * SEASON_W + q_spd * Q_W
 
-    # race weather (actual conditions)
-    race = fastf1.get_session(year, event, 'R')
-    race.load()
-    w = race.weather_data
+    if pre_race:
+        # race hasn't run — use qualifying conditions as the best available proxy
+        qw = quali.weather_data
+        temp, humidity, rain, race_results = (
+            qw['AirTemp'].mean(), qw['Humidity'].mean(), 1 if qw['Rainfall'].any() else 0, None)
+    else:
+        race = fastf1.get_session(year, event, 'R')
+        race.load()
+        w = race.weather_data
+        temp, humidity, rain, race_results = (
+            w['AirTemp'].mean(), w['Humidity'].mean(), 1 if w['Rainfall'].any() else 0, race.results)
     return {
         'grid': grid, 'team_map': team_map,
         'sector_s1': sector_s1, 'sector_s2': sector_s2, 'sector_s3': sector_s3,
         'car_pace': car_pace, 'car_speed': car_speed,
-        'temp': w['AirTemp'].mean(), 'humidity': w['Humidity'].mean(),
-        'rain': 1 if w['Rainfall'].any() else 0,
-        'race_results': race.results, 'quali_results': qres,
+        'temp': temp, 'humidity': humidity, 'rain': rain,
+        'race_results': race_results, 'quali_results': qres,
     }
 
 

@@ -1,9 +1,13 @@
-"""Generate a retrospective prediction notebook for a completed 2026 race.
+"""Generate a prediction notebook for a 2026 race.
 
-    python scripts/make_retro_notebook.py <round> <Event> <TrackLabel> <sectors_csv> <date_str>
+    python scripts/make_retro_notebook.py <round> <Event> <TrackLabel> <sectors_csv> <date_str> [--pre-race]
 
-Example:
+Examples:
+    # retrospective (race has run) — includes the accuracy section
     python scripts/make_retro_notebook.py 4 Miami "Miami International Autodrome" miami_sectors.csv "May 1-3, 2026"
+
+    # live, Saturday after qualifying (race not yet run) — stops before grading
+    python scripts/make_retro_notebook.py 7 Barcelona "Circuit de Barcelona-Catalunya" barcelona_sectors.csv "June 12-14, 2026" --pre-race
 
 Writes notebooks/2026-R0N-<event>.ipynb. Execute it with nbconvert to populate
 outputs before committing.
@@ -11,14 +15,31 @@ outputs before committing.
 import sys
 import json
 
-RND = int(sys.argv[1])
-EVENT = sys.argv[2]
-TRACK = sys.argv[3]
-SECTORS = sys.argv[4]
-DATE = sys.argv[5]
+PRE_RACE = '--pre-race' in sys.argv
+args = [a for a in sys.argv[1:] if a != '--pre-race']
+
+RND = int(args[0])
+EVENT = args[1]
+TRACK = args[2]
+SECTORS = args[3]
+DATE = args[4]
 SLUG = EVENT.lower().replace(' ', '-')
 
-TITLE_MD = f"""# \U0001f3ce️ Nina's F1 Predictions: 2026 {EVENT} Grand Prix (Round {RND})
+if PRE_RACE:
+    TITLE_MD = f"""# \U0001f3ce️ Nina's F1 Predictions: 2026 {EVENT} Grand Prix (Round {RND})
+## {TRACK} — {DATE}
+
+**Model version:** v1.0+Q (live, post-qualifying)
+**Confidence:** HIGH
+
+### What This Is
+
+A machine learning model that predicts Formula 1 race results from 24 features — the same kinds of data a race engineer considers when building race strategy. The model trains on every race so far this season (2026 weighted 10x over 2023-2025 history), takes the **actual qualifying grid** and **live qualifying sector times** for this weekend, then runs 10,000 simulated races to estimate podium probabilities.
+
+> **This is a live prediction made after qualifying, before the race.** The accuracy check will be added here once the race has run.
+"""
+else:
+    TITLE_MD = f"""# \U0001f3ce️ Nina's F1 Predictions: 2026 {EVENT} Grand Prix (Round {RND})
 ## {TRACK} — {DATE}
 
 **Model version:** v1.0+Q (retrospective)
@@ -40,9 +61,13 @@ f1lib.enable_cache('../data/cache')
 
 EVENT, RND, TRACK = '{EVENT}', {RND}, '{TRACK}'
 SECTORS = '../data/{SECTORS}'
+PRE_RACE = {PRE_RACE}
 
 df, weather, lap_stats, advanced, lk = f1lib.load_data('../data')
-target_seq = df[(df.Year == 2026) & (df.Round == RND)]['race_seq'].iloc[0]
+# If this round is already in the data use its slot; otherwise (pre-race, race not
+# yet appended) train on everything available by targeting one past the last race.
+_rows = df[(df.Year == 2026) & (df.Round == RND)]
+target_seq = int(_rows['race_seq'].iloc[0]) if len(_rows) else int(df['race_seq'].max() + 1)
 
 sec = f1lib.track_sector_deltas(SECTORS)
 cp_season = f1lib.season_pace(df, 2026, target_seq)
@@ -68,7 +93,7 @@ QUALI_MD = f"""## 1. Qualifying & Blended Car Pace
 
 Grid position is the model's single strongest predictor. This weekend's actual qualifying result sets the starting grid, and the team-level pace is a 30/70 blend of season-to-date form and qualifying performance. Live {EVENT} sector deltas from qualifying replace the historical track profile."""
 
-QUALI = """wk = f1lib.weekend(2026, EVENT, df, {'pace': cp_season, 'speed': speeds_2026})
+QUALI = """wk = f1lib.weekend(2026, EVENT, df, {'pace': cp_season, 'speed': speeds_2026}, pre_race=PRE_RACE)
 wk['race_name'] = EVENT
 
 grid_sorted = sorted(wk['grid'].items(), key=lambda x: x[1])
@@ -187,6 +212,11 @@ ax.legend(); plt.tight_layout(); plt.show()
 """
 
 
+CLOSING_MD = f"""## 4. Race Results & Model Accuracy
+
+*Pending — the {EVENT} GP has not run yet. After the race, regenerate this notebook without `--pre-race` (the round will be in the data by then) to add the official results, the position-by-position accuracy, and the grid-baseline comparison.*"""
+
+
 def cell(t, src):
     c = {'cell_type': t, 'metadata': {}, 'source': src.splitlines(keepends=True)}
     if t == 'code':
@@ -194,15 +224,18 @@ def cell(t, src):
     return c
 
 
+cells = [
+    cell('markdown', TITLE_MD),
+    cell('code', SETUP),
+    cell('markdown', QUALI_MD), cell('code', QUALI),
+    cell('markdown', PRED_MD), cell('code', PRED),
+    cell('markdown', SIM_MD), cell('code', SIM),
+]
+# the grading section requires the race to have run
+cells += [cell('markdown', CLOSING_MD)] if PRE_RACE else [cell('markdown', GRADE_MD), cell('code', GRADE)]
+
 nb = {
-    'cells': [
-        cell('markdown', TITLE_MD),
-        cell('code', SETUP),
-        cell('markdown', QUALI_MD), cell('code', QUALI),
-        cell('markdown', PRED_MD), cell('code', PRED),
-        cell('markdown', SIM_MD), cell('code', SIM),
-        cell('markdown', GRADE_MD), cell('code', GRADE),
-    ],
+    'cells': cells,
     'metadata': {
         'kernelspec': {'display_name': 'Python 3', 'language': 'python', 'name': 'python3'},
         'language_info': {'name': 'python'},
