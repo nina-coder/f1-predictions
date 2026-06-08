@@ -35,8 +35,11 @@ Predicted winner from the post-qualifying model vs. the actual result. The model
 | R04 | Miami | Antonelli | Antonelli | ✅ | 4/5 | 7/10 | 3.00 | 2.56 | −0.44 |
 | R05 | Canada | Antonelli | Antonelli | ✅ | 2/5 | 6/10 | 3.88 | 3.94 | **+0.06** |
 | R06 | Monaco | Antonelli | Antonelli | ✅ | 2/5 | 6/10 | 4.13 | 3.87 | −0.27 |
+| R07 | Barcelona | Antonelli | *TBD* | — | — | — | — | — | — |
 
-Per-race pages: [Japan](https://nina-coder.github.io/f1-predictions/r03-japan/) · [Miami](https://nina-coder.github.io/f1-predictions/r04-miami/) · [Canada](https://nina-coder.github.io/f1-predictions/r05-canada/) · [Monaco](https://nina-coder.github.io/f1-predictions/r06-monaco/)
+**Latest:** [Barcelona pre-qualifying baseline](https://nina-coder.github.io/f1-predictions/) — estimated grid, refreshes as practice and qualifying land.
+
+Per-race pages: [Japan](https://nina-coder.github.io/f1-predictions/r03-japan/) · [Miami](https://nina-coder.github.io/f1-predictions/r04-miami/) · [Canada](https://nina-coder.github.io/f1-predictions/r05-canada/) · [Monaco](https://nina-coder.github.io/f1-predictions/r06-monaco/) · [Barcelona](https://nina-coder.github.io/f1-predictions/r07-barcelona/)
 
 *Rounds 1-2 (Australia, China) predate the model. Bahrain and Saudi Arabia were cancelled. R03 was a live pre-race prediction; R04-R06 are retrospectives reconstructed from each weekend's qualifying — no race data enters the model, so the accuracy check is fair. The current model is roughly a qualifying-order copy; closing the gap to the baseline is the active work.*
 

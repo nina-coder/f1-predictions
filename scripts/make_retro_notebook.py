@@ -20,15 +20,18 @@ qualifying conditions as the race-day proxy.
 import sys
 import json
 
+# Modes: retrospective (default, race done) | --pre-race (post-quali, pre-race)
+# | --pre-qualifying (early weekend, no quali yet — estimated grid)
 PRE_RACE = '--pre-race' in sys.argv
-# --weather auto | --weather T,H,R | (absent) -> use qualifying-conditions proxy
+PRE_QUALI = '--pre-qualifying' in sys.argv
+# --weather auto | --weather T,H,R | (absent) -> stage default conditions
 WEATHER = ''
 _av = sys.argv[1:]
 if '--weather' in _av:
     _i = _av.index('--weather')
     WEATHER = _av[_i + 1]
     del _av[_i:_i + 2]
-args = [a for a in _av if a != '--pre-race']
+args = [a for a in _av if a not in ('--pre-race', '--pre-qualifying')]
 
 RND = int(args[0])
 EVENT = args[1]
@@ -37,7 +40,20 @@ SECTORS = args[3]
 DATE = args[4]
 SLUG = EVENT.lower().replace(' ', '-')
 
-if PRE_RACE:
+if PRE_QUALI:
+    TITLE_MD = f"""# \U0001f3ce️ Nina's F1 Predictions: 2026 {EVENT} Grand Prix (Round {RND})
+## {TRACK} — {DATE}
+
+**Model version:** v1.0+Q (early weekend, pre-qualifying)
+**Confidence:** MEDIUM — grid is estimated, not yet set
+
+### What This Is
+
+A machine learning model that predicts Formula 1 race results from 24 features — the same kinds of data a race engineer considers when building race strategy. This is the **first cut of the weekend**, made before qualifying: the model trains on every race so far this season (2026 weighted 10x over 2023-2025 history) and estimates the grid from team pace plus driver form. It refreshes as practice and qualifying data arrive — the qualifying update is the biggest jump in accuracy.
+
+> **The grid here is an estimate, so treat this as a baseline.** It will be replaced by the real qualifying result, and the race accuracy check added, as the weekend progresses.
+"""
+elif PRE_RACE:
     TITLE_MD = f"""# \U0001f3ce️ Nina's F1 Predictions: 2026 {EVENT} Grand Prix (Round {RND})
 ## {TRACK} — {DATE}
 
@@ -102,13 +118,10 @@ for f, s in imp[:8]:
     print(f'    {{f:25s}} {{s:.3f}}')
 """
 
-QUALI_MD = f"""## 1. Qualifying & Blended Car Pace
-
-Grid position is the model's single strongest predictor. This weekend's actual qualifying result sets the starting grid, and the team-level pace is a 30/70 blend of season-to-date form and qualifying performance. Live {EVENT} sector deltas from qualifying replace the historical track profile."""
-
-QUALI = """import fastf1
+# shared weather resolution, used by both the qualifying and pre-qualifying cells
+WEATHER_BLOCK = """import fastf1
 # Race-day weather. WEATHER is 'auto' (Open-Meteo forecast), 'temp,humidity,rain%'
-# (manual), or '' (use qualifying conditions as the proxy).
+# (manual), or '' (use the stage's default conditions).
 forecast = None
 if WEATHER == 'auto':
     _ev = fastf1.get_event(2026, RND)
@@ -118,13 +131,27 @@ if WEATHER == 'auto':
         print(f"  \U0001f324️ Forecast (Open-Meteo, {_race_date}): {forecast['air_temp']:.0f}°C, "
               f"{forecast['humidity']:.0f}% RH, {forecast['rain_prob']:.0f}% rain")
     else:
-        print('  ⚠️ Forecast unavailable — falling back to qualifying conditions.')
+        print('  ⚠️ Forecast unavailable — falling back to default conditions.')
 elif WEATHER:
     _p = [float(x) for x in WEATHER.split(',')]
     forecast = {'air_temp': _p[0], 'humidity': _p[1], 'rain_prob': _p[2]}
     print(f"  \U0001f324️ Manual forecast: {forecast['air_temp']:.0f}°C, "
           f"{forecast['humidity']:.0f}% RH, {forecast['rain_prob']:.0f}% rain")
+"""
 
+CONDITIONS_PRINT = """
+_cond = 'WET' if wk['rain'] else 'DRY'
+print(f"\\n  \U0001f321️ Race conditions: {wk['temp']:.1f}°C, {wk['humidity']:.0f}% humidity, "
+      f"{wk['rain_prob']:.0f}% rain -> {_cond}")
+if 0 < wk['rain_prob'] < 100:
+    print(f"  Predictions are a {wk['rain_prob']:.0f}% wet / {100-wk['rain_prob']:.0f}% dry blend.")
+"""
+
+QUALI_MD = f"""## 1. Qualifying & Blended Car Pace
+
+Grid position is the model's single strongest predictor. This weekend's actual qualifying result sets the starting grid, and the team-level pace is a 30/70 blend of season-to-date form and qualifying performance. Live {EVENT} sector deltas from qualifying replace the historical track profile."""
+
+QUALI = WEATHER_BLOCK + """
 wk = f1lib.weekend(2026, EVENT, df, {'pace': cp_season, 'speed': speeds_2026},
                    pre_race=PRE_RACE, forecast=forecast)
 wk['race_name'] = EVENT
@@ -138,14 +165,28 @@ print('  ' + '-' * 60)
 for name, pos in grid_sorted:
     t = wk['team_map'].get(name, '')
     print(f"  P{pos:>2d}  {name:22s}  {t:18s}  P{wk['car_pace'].get(t, 15):>6.1f}")
+""" + CONDITIONS_PRINT
 
-_cond = 'WET' if wk['rain'] else 'DRY'
-_src = 'forecast' if forecast else ('qualifying proxy' if PRE_RACE else 'race actual')
-print(f"\\n  \U0001f321️ Race conditions ({_src}): {wk['temp']:.1f}°C, {wk['humidity']:.0f}% humidity, "
-      f"{wk['rain_prob']:.0f}% rain -> {_cond}")
-if 0 < wk['rain_prob'] < 100:
-    print(f"  Predictions are a {wk['rain_prob']:.0f}% wet / {100-wk['rain_prob']:.0f}% dry blend.")
-"""
+QUALI_PREQ_MD = f"""## 1. Season Pace & Estimated Grid
+
+Qualifying hasn't run yet, so there is no real grid. The model estimates the starting order from team pace (season form blended with any practice that has run) plus each driver's season form, and uses {EVENT}'s historical sector profile. **The grid below is an estimate** — it will be replaced by the real qualifying result when this page is regenerated on Saturday, which is the single biggest accuracy jump of the weekend."""
+
+QUALI_PREQ = WEATHER_BLOCK + """
+wk = f1lib.weekend_preq(2026, EVENT, df, {'pace': cp_season, 'speed': speeds_2026}, sec,
+                        forecast=forecast)
+wk['race_name'] = EVENT
+
+grid_sorted = sorted(wk['grid'].items(), key=lambda x: x[1])
+print('=' * 70)
+print(f'  \U0001f4ca ESTIMATED GRID — 2026 {EVENT} GP  [stage: {wk["stage"]}]')
+print('=' * 70)
+print(f"\\n  {'Est':>3s}  {'Driver':22s}  {'Team':18s}  {'Blend Pace':>10s}")
+print('  ' + '-' * 60)
+for name, pos in grid_sorted:
+    t = wk['team_map'].get(name, '')
+    print(f"  P{pos:>2d}  {name:22s}  {t:18s}  P{wk['car_pace'].get(t, 15):>6.1f}")
+print("\\n  Grid is ESTIMATED from pace + form; real qualifying replaces it Saturday.")
+""" + CONDITIONS_PRINT
 
 PRED_MD = """## 2. Predicted Finish
 
@@ -250,7 +291,15 @@ ax.legend(); plt.tight_layout(); plt.show()
 """
 
 
-CLOSING_MD = f"""## 4. Race Results & Model Accuracy
+if PRE_QUALI:
+    CLOSING_MD = f"""## 4. What Happens Next
+
+*This is the pre-qualifying baseline for the {EVENT} GP. It refreshes through the weekend:*
+- *Friday (after practice): rerun `--pre-qualifying` to fold in FP pace.*
+- *Saturday (after qualifying): rerun `--pre-race --weather auto` for the real grid — the biggest accuracy jump.*
+- *After the race: run `update_data.py` then rerun with no flag to add the official results and accuracy.*"""
+else:
+    CLOSING_MD = f"""## 4. Race Results & Model Accuracy
 
 *Pending — the {EVENT} GP has not run yet. After the race, regenerate this notebook without `--pre-race` (the round will be in the data by then) to add the official results, the position-by-position accuracy, and the grid-baseline comparison.*"""
 
@@ -262,15 +311,18 @@ def cell(t, src):
     return c
 
 
+_quali_md = QUALI_PREQ_MD if PRE_QUALI else QUALI_MD
+_quali = QUALI_PREQ if PRE_QUALI else QUALI
 cells = [
     cell('markdown', TITLE_MD),
     cell('code', SETUP),
-    cell('markdown', QUALI_MD), cell('code', QUALI),
+    cell('markdown', _quali_md), cell('code', _quali),
     cell('markdown', PRED_MD), cell('code', PRED),
     cell('markdown', SIM_MD), cell('code', SIM),
 ]
 # the grading section requires the race to have run
-cells += [cell('markdown', CLOSING_MD)] if PRE_RACE else [cell('markdown', GRADE_MD), cell('code', GRADE)]
+cells += ([cell('markdown', GRADE_MD), cell('code', GRADE)]
+          if not (PRE_RACE or PRE_QUALI) else [cell('markdown', CLOSING_MD)])
 
 nb = {
     'cells': cells,

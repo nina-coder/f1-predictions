@@ -325,6 +325,105 @@ def weekend(year, event, df, season_speed, pre_race=False, forecast=None):
     }
 
 
+def _try_session(year, event, sess):
+    """Load a session, returning it only if it has lap data; else None."""
+    try:
+        s = fastf1.get_session(year, event, sess)
+        s.load()
+        if s.laps is None or len(s.laps) == 0:
+            return None
+        return s
+    except Exception:
+        return None
+
+
+def _practice_team_pos(session):
+    """Team -> grid-position proxy from a practice session's best laps."""
+    laps = session.laps
+    best = laps.groupby('Driver')['LapTime'].min().dropna()
+    name_map = dict(zip(session.results['Abbreviation'], session.results['FullName']))
+    team_map = dict(zip(session.results['FullName'], session.results['TeamName']))
+    gaps = {}
+    for drv, lt in best.items():
+        team = team_map.get(name_map.get(drv, drv))
+        if team:
+            gaps.setdefault(team, []).append(lt.total_seconds())
+    order = sorted(gaps, key=lambda t: np.mean(gaps[t]))
+    return {t: i * 2 + 1.5 for i, t in enumerate(order)}, team_map
+
+
+def weekend_preq(year, event, df, season_speed, sec_deltas, forecast=None):
+    """Early-weekend prediction with NO qualifying yet.
+
+    Replaces the original notebook's progressive flow. Team pace is season form
+    blended with whatever practice (FP1/FP2/FP3) has run; the starting grid is
+    *estimated* from that pace plus driver season form; sector deltas come from
+    the track's history (not live). As FP sessions appear the blend tightens, and
+    once qualifying exists you switch to weekend() for the real grid.
+
+    Returns the same dict shape as weekend(), plus 'stage' and 'estimated_grid',
+    with race_results=None and quali_results=None.
+    """
+    s1d, s2d, s3d = sec_deltas
+    season_pace_dict, season_spd_dict = season_speed['pace'], season_speed['speed']
+
+    # current lineup + teams from the most recent completed 2026 race
+    season = df[(df['Year'] == 2026) & df['Position'].notna()]
+    last_seq = season['race_seq'].max()
+    entry = df[(df['Year'] == 2026) & (df['race_seq'] == last_seq)]
+    team_map = dict(zip(entry['FullName'], entry['TeamName']))
+    drivers = list(team_map)
+    season_avg_finish = season.groupby('FullName')['Position'].mean().to_dict()
+
+    # blend season pace with available practice sessions (same weighting logic the
+    # Japan notebook used as each session arrived)
+    practice = [(s, _try_session(year, event, s)) for s in ('FP1', 'FP2', 'FP3')]
+    practice = [(name, _practice_team_pos(sess)) for name, sess in practice if sess is not None]
+    if not practice:
+        weights, stage = {'season': 1.0}, 'pre-practice (season form)'
+    elif len(practice) == 1:
+        weights, stage = {'season': 0.6, 0: 0.4}, 'post-FP1'
+    elif len(practice) == 2:
+        weights, stage = {'season': 0.3, 0: 0.3, 1: 0.4}, 'post-FP2'
+    else:
+        weights, stage = {'season': 0.2, 0: 0.2, 1: 0.3, 2: 0.3}, 'post-FP3'
+    # practice may carry the freshest team map (driver swaps)
+    for _, (_, tmap) in zip(range(len(practice)), practice):
+        team_map.update({d: t for d, t in tmap.items() if d in team_map})
+
+    teams = set(season_pace_dict) | {team_map[d] for d in drivers if d in team_map}
+    car_pace = {}
+    for t in teams:
+        val = weights['season'] * season_pace_dict.get(t, 15)
+        for i, (_, tpos) in enumerate(practice):
+            val += weights[i] * tpos.get(t, season_pace_dict.get(t, 15))
+        car_pace[t] = val
+    car_speed = {t: season_spd_dict.get(t, 290) for t in teams}
+
+    # estimate the grid: 70% car pace, 30% driver season form, ranked 1..N
+    proxy = {}
+    for d in drivers:
+        t = team_map.get(d)
+        tp = car_pace.get(t, 15)
+        proxy[d] = 0.7 * tp + 0.3 * season_avg_finish.get(d, tp)
+    grid = {d: i + 1 for i, (d, _) in enumerate(sorted(proxy.items(), key=lambda x: x[1]))}
+
+    # conditions: forecast if given, else mild dry default
+    if forecast:
+        temp, humidity, rain_prob = forecast['air_temp'], forecast['humidity'], float(forecast['rain_prob'])
+    else:
+        temp, humidity, rain_prob = 22.0, 50.0, 0.0
+    return {
+        'grid': grid, 'estimated_grid': True, 'stage': stage, 'team_map': team_map,
+        'sector_s1': {d: s1d.get(d, 0) for d in drivers},
+        'sector_s2': {d: s2d.get(d, 0) for d in drivers},
+        'sector_s3': {d: s3d.get(d, 0) for d in drivers},
+        'car_pace': car_pace, 'car_speed': car_speed,
+        'temp': temp, 'humidity': humidity, 'rain': 1 if rain_prob >= 50 else 0,
+        'rain_prob': rain_prob, 'race_results': None, 'quali_results': None,
+    }
+
+
 def predict(df, feat_df, model, lk, wk):
     """Predict the target race for the 2026 grid using actual qualifying grid +
     live sectors + blended pace. Returns a sorted list of dicts (best first).
