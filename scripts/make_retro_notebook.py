@@ -6,17 +6,29 @@ Examples:
     # retrospective (race has run) — includes the accuracy section
     python scripts/make_retro_notebook.py 4 Miami "Miami International Autodrome" miami_sectors.csv "May 1-3, 2026"
 
-    # live, Saturday after qualifying (race not yet run) — stops before grading
-    python scripts/make_retro_notebook.py 7 Barcelona "Circuit de Barcelona-Catalunya" barcelona_sectors.csv "June 12-14, 2026" --pre-race
+    # live, Saturday after qualifying (race not yet run) — stops before grading,
+    # pulls the race-day forecast automatically (Open-Meteo, no API key)
+    python scripts/make_retro_notebook.py 7 Barcelona "Circuit de Barcelona-Catalunya" barcelona_sectors.csv "June 12-14, 2026" --pre-race --weather auto
+
+    # ...or pass the forecast by hand as temp,humidity,rain%  (e.g. 24C / 70% / 40% rain)
+    python scripts/make_retro_notebook.py 7 Barcelona "Circuit de Barcelona-Catalunya" barcelona_sectors.csv "June 12-14, 2026" --pre-race --weather 24,70,40
 
 Writes notebooks/2026-R0N-<event>.ipynb. Execute it with nbconvert to populate
-outputs before committing.
+outputs before committing. --weather is optional; without it the prediction uses
+qualifying conditions as the race-day proxy.
 """
 import sys
 import json
 
 PRE_RACE = '--pre-race' in sys.argv
-args = [a for a in sys.argv[1:] if a != '--pre-race']
+# --weather auto | --weather T,H,R | (absent) -> use qualifying-conditions proxy
+WEATHER = ''
+_av = sys.argv[1:]
+if '--weather' in _av:
+    _i = _av.index('--weather')
+    WEATHER = _av[_i + 1]
+    del _av[_i:_i + 2]
+args = [a for a in _av if a != '--pre-race']
 
 RND = int(args[0])
 EVENT = args[1]
@@ -62,6 +74,7 @@ f1lib.enable_cache('../data/cache')
 EVENT, RND, TRACK = '{EVENT}', {RND}, '{TRACK}'
 SECTORS = '../data/{SECTORS}'
 PRE_RACE = {PRE_RACE}
+WEATHER = '{WEATHER}'
 
 df, weather, lap_stats, advanced, lk = f1lib.load_data('../data')
 # If this round is already in the data use its slot; otherwise (pre-race, race not
@@ -93,7 +106,27 @@ QUALI_MD = f"""## 1. Qualifying & Blended Car Pace
 
 Grid position is the model's single strongest predictor. This weekend's actual qualifying result sets the starting grid, and the team-level pace is a 30/70 blend of season-to-date form and qualifying performance. Live {EVENT} sector deltas from qualifying replace the historical track profile."""
 
-QUALI = """wk = f1lib.weekend(2026, EVENT, df, {'pace': cp_season, 'speed': speeds_2026}, pre_race=PRE_RACE)
+QUALI = """import fastf1
+# Race-day weather. WEATHER is 'auto' (Open-Meteo forecast), 'temp,humidity,rain%'
+# (manual), or '' (use qualifying conditions as the proxy).
+forecast = None
+if WEATHER == 'auto':
+    _ev = fastf1.get_event(2026, RND)
+    _race_date = str(pd.to_datetime(_ev['EventDate']).date())
+    forecast = f1lib.fetch_forecast(EVENT, _race_date)
+    if forecast:
+        print(f"  \U0001f324️ Forecast (Open-Meteo, {_race_date}): {forecast['air_temp']:.0f}°C, "
+              f"{forecast['humidity']:.0f}% RH, {forecast['rain_prob']:.0f}% rain")
+    else:
+        print('  ⚠️ Forecast unavailable — falling back to qualifying conditions.')
+elif WEATHER:
+    _p = [float(x) for x in WEATHER.split(',')]
+    forecast = {'air_temp': _p[0], 'humidity': _p[1], 'rain_prob': _p[2]}
+    print(f"  \U0001f324️ Manual forecast: {forecast['air_temp']:.0f}°C, "
+          f"{forecast['humidity']:.0f}% RH, {forecast['rain_prob']:.0f}% rain")
+
+wk = f1lib.weekend(2026, EVENT, df, {'pace': cp_season, 'speed': speeds_2026},
+                   pre_race=PRE_RACE, forecast=forecast)
 wk['race_name'] = EVENT
 
 grid_sorted = sorted(wk['grid'].items(), key=lambda x: x[1])
@@ -106,7 +139,12 @@ for name, pos in grid_sorted:
     t = wk['team_map'].get(name, '')
     print(f"  P{pos:>2d}  {name:22s}  {t:18s}  P{wk['car_pace'].get(t, 15):>6.1f}")
 
-print(f"\\n  \U0001f321️ Race conditions: {wk['temp']:.1f}°C, {wk['humidity']:.0f}% humidity, {'WET' if wk['rain'] else 'DRY'}")
+_cond = 'WET' if wk['rain'] else 'DRY'
+_src = 'forecast' if forecast else ('qualifying proxy' if PRE_RACE else 'race actual')
+print(f"\\n  \U0001f321️ Race conditions ({_src}): {wk['temp']:.1f}°C, {wk['humidity']:.0f}% humidity, "
+      f"{wk['rain_prob']:.0f}% rain -> {_cond}")
+if 0 < wk['rain_prob'] < 100:
+    print(f"  Predictions are a {wk['rain_prob']:.0f}% wet / {100-wk['rain_prob']:.0f}% dry blend.")
 """
 
 PRED_MD = """## 2. Predicted Finish

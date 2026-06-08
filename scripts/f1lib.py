@@ -38,6 +38,42 @@ def enable_cache(path='../data/cache'):
     logging.getLogger('fastf1').setLevel(logging.ERROR)
 
 
+# Circuit coordinates + local timezone for race-day weather lookups. Keyed by the
+# event name passed to weekend(). Add a row when you add a track.
+CIRCUIT_COORDS = {
+    'Japan': (34.843, 136.541, 'Asia/Tokyo'),
+    'Miami': (25.958, -80.239, 'America/New_York'),
+    'Canada': (45.500, -73.522, 'America/Toronto'),
+    'Monaco': (43.735, 7.421, 'Europe/Monaco'),
+    'Barcelona': (41.570, 2.261, 'Europe/Madrid'),
+}
+
+
+def fetch_forecast(event, date_str, hour=15):
+    """Race-day forecast from Open-Meteo (no API key). date_str is 'YYYY-MM-DD',
+    hour is local race start (24h). Returns {air_temp, humidity, rain_prob} where
+    rain_prob is 0-100, or None if the circuit is unmapped or the call fails."""
+    import json
+    from urllib.request import urlopen
+    from urllib.parse import urlencode
+    if event not in CIRCUIT_COORDS:
+        return None
+    lat, lon, tz = CIRCUIT_COORDS[event]
+    q = urlencode({'latitude': lat, 'longitude': lon, 'timezone': tz,
+                   'hourly': 'temperature_2m,relative_humidity_2m,precipitation_probability',
+                   'start_date': date_str, 'end_date': date_str})
+    try:
+        with urlopen(f'https://api.open-meteo.com/v1/forecast?{q}', timeout=20) as r:
+            h = json.load(r).get('hourly', {})
+        target = f'{date_str}T{hour:02d}:00'
+        i = h['time'].index(target) if target in h['time'] else len(h['time']) // 2
+        return {'air_temp': h['temperature_2m'][i],
+                'humidity': h['relative_humidity_2m'][i],
+                'rain_prob': h['precipitation_probability'][i]}
+    except Exception:
+        return None
+
+
 def load_data(data_dir='../data'):
     """Load CSVs and build the driver/team lookups the feature builder needs."""
     df = pd.read_csv(f'{data_dir}/all_results.csv')
@@ -204,15 +240,20 @@ def train(feat_df, target_seq):
     return model, loo_mae, residual_std
 
 
-def weekend(year, event, df, season_speed, pre_race=False):
+def weekend(year, event, df, season_speed, pre_race=False, forecast=None):
     """Pull a weekend's qualifying for grid + live sector deltas + blended car pace.
 
     Retrospective mode (default) also loads the race for actual weather + results.
     pre_race=True is for a Saturday run before the race has happened: it skips the
     race session, takes conditions from qualifying, and returns race_results=None.
 
+    forecast (optional) = {air_temp, humidity, rain_prob (0-100)} overrides the
+    race-day conditions — use it pre-race so the prediction reflects the actual
+    Sunday forecast rather than qualifying conditions. rain_prob drives a wet/dry
+    blend in predict().
+
     Returns dict: grid, sector_s1/2/3, car_pace, car_speed, temp, humidity, rain,
-    race_results (None if pre_race), quali_results.
+    rain_prob, race_results (None if pre_race), quali_results.
     """
     season_pace_dict = season_speed['pace']
     season_spd_dict = season_speed['speed']
@@ -269,19 +310,30 @@ def weekend(year, event, df, season_speed, pre_race=False):
         w = race.weather_data
         temp, humidity, rain, race_results = (
             w['AirTemp'].mean(), w['Humidity'].mean(), 1 if w['Rainfall'].any() else 0, race.results)
+    rain_prob = 100.0 if rain else 0.0
+    if forecast:
+        # an explicit race-day forecast overrides the proxy conditions
+        temp, humidity = forecast['air_temp'], forecast['humidity']
+        rain_prob = float(forecast['rain_prob'])
+        rain = 1 if rain_prob >= 50 else 0
     return {
         'grid': grid, 'team_map': team_map,
         'sector_s1': sector_s1, 'sector_s2': sector_s2, 'sector_s3': sector_s3,
         'car_pace': car_pace, 'car_speed': car_speed,
-        'temp': temp, 'humidity': humidity, 'rain': rain,
+        'temp': temp, 'humidity': humidity, 'rain': rain, 'rain_prob': rain_prob,
         'race_results': race_results, 'quali_results': qres,
     }
 
 
 def predict(df, feat_df, model, lk, wk):
     """Predict the target race for the 2026 grid using actual qualifying grid +
-    live sectors + blended pace. Returns a sorted list of dicts (best first)."""
-    latest_2026 = df[df['Year'] == 2026]
+    live sectors + blended pace. Returns a sorted list of dicts (best first).
+
+    When wk['rain_prob'] is between 0 and 100 the prediction is a probability
+    blend of a dry run and a wet run (had_rain=1, humidity raised to 85), so a
+    forecast like '40% rain' shifts the order toward wet-weather skill
+    proportionally instead of flipping on a hard threshold."""
+    rp = wk.get('rain_prob', 0.0) / 100.0
     preds = []
     for d in wk['grid']:
         dh = feat_df[feat_df['FullName'] == d].sort_values('race_seq')
@@ -305,10 +357,17 @@ def predict(df, feat_df, model, lk, wk):
             'sector2_delta': wk['sector_s2'].get(d, 0),
             'sector3_delta': wk['sector_s3'].get(d, 0),
         })
-        X = pd.DataFrame([base])[FEATURE_COLS].fillna(0)
+        dry = float(model.predict(pd.DataFrame([{**base, 'had_rain': 0}])[FEATURE_COLS].fillna(0))[0])
+        if 0 < rp < 1:
+            wet_feat = {**base, 'had_rain': 1, 'humidity': max(base['humidity'], 85)}
+            wet = float(model.predict(pd.DataFrame([wet_feat])[FEATURE_COLS].fillna(0))[0])
+            pred = (1 - rp) * dry + rp * wet
+        else:
+            pred = dry if rp == 0 else float(
+                model.predict(pd.DataFrame([{**base, 'had_rain': 1,
+                                             'humidity': max(base['humidity'], 85)}])[FEATURE_COLS].fillna(0))[0])
         preds.append({'Driver': d, 'Team': t, 'Grid': wk['grid'][d],
-                      'Car': wk['car_pace'].get(t, 15), 'Predicted': float(model.predict(X)[0]),
-                      'Features': base})
+                      'Car': wk['car_pace'].get(t, 15), 'Predicted': pred, 'Features': base})
     preds.sort(key=lambda x: x['Predicted'])
     for i, p in enumerate(preds):
         p['Rank'] = i + 1
