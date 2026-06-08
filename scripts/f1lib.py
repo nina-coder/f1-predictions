@@ -305,8 +305,15 @@ def predict(df, feat_df, model, lk, wk):
     return preds
 
 
-def simulate(preds, residual_std, n_sims=10000, sc_prob=0.33, seed=42):
-    """Monte-Carlo race sim with grid-dependent variance + safety car."""
+def simulate(preds, residual_std, n_sims=10000, sc_prob=0.33, seed=42, dnf=True):
+    """Monte-Carlo race sim with grid-dependent variance, safety car, and DNFs.
+
+    Each sim, a driver retires with probability = their season dnf_rate; retirees
+    are classified behind every finisher, so a front-runner's DNF promotes
+    everyone behind. This is what lets the sim produce the position movement the
+    point estimate misses on high-attrition tracks (Canada, Monaco). dnf_rate is
+    clamped to [0.02, 0.40] to keep a single bad streak from dominating.
+    """
     from collections import defaultdict
     rng = np.random.default_rng(seed)
 
@@ -319,24 +326,37 @@ def simulate(preds, residual_std, n_sims=10000, sc_prob=0.33, seed=42):
             return residual_std * 1.2
         return residual_std * 1.0
 
+    dnf_rate = {p['Driver']: min(0.40, max(0.02, p['Features'].get('dnf_rate', 0.1)))
+                for p in preds}
+
     pt = defaultdict(list)
     wc = defaultdict(int); pc = defaultdict(int); t5 = defaultdict(int); t10 = defaultdict(int)
+    dnf_count = defaultdict(int)
     for _ in range(n_sims):
         sc = rng.random() < sc_prob
-        sim = []
+        finishers, retirees = [], []
         for p in preds:
+            d = p['Driver']
+            if dnf and rng.random() < dnf_rate[d]:
+                retirees.append(d)
+                dnf_count[d] += 1
+                continue
             pred = p['Predicted'] + rng.normal(0, gv(p['Grid']))
             if sc and p['Grid'] > 5:
                 pred -= rng.uniform(0, 1.5)
-            sim.append((p['Driver'], pred))
-        sim.sort(key=lambda x: x[1])
-        for pos, (d, _) in enumerate(sim):
+            finishers.append((d, pred))
+        finishers.sort(key=lambda x: x[1])
+        # retirees fill the classified positions behind all finishers, worst-grid last
+        order = [d for d, _ in finishers] + sorted(
+            retirees, key=lambda d: next(p['Grid'] for p in preds if p['Driver'] == d))
+        for pos, d in enumerate(order):
             pt[d].append(pos + 1)
             if pos == 0: wc[d] += 1
             if pos < 3: pc[d] += 1
             if pos < 5: t5[d] += 1
             if pos < 10: t10[d] += 1
-    return {'pt': pt, 'win': wc, 'podium': pc, 'top5': t5, 'top10': t10, 'n': n_sims}
+    return {'pt': pt, 'win': wc, 'podium': pc, 'top5': t5, 'top10': t10,
+            'dnf': dnf_count, 'n': n_sims}
 
 
 def grade(preds, race_results):
@@ -362,9 +382,19 @@ def grade(preds, race_results):
     actual_order = [n for n, _ in sorted(((n, p) for n, p in actual_pos.items() if pd.notna(p)),
                                          key=lambda x: x[1])]
     pred_order = [p['Driver'] for p in preds]
+    # grid baseline: the naive "everyone finishes where they qualified" predictor,
+    # graded the same way as the model so we always know if the model adds value.
+    grid_rank = {d: i + 1 for i, (d, _) in enumerate(
+        sorted(((p['Driver'], p['Grid']) for p in preds), key=lambda x: x[1]))}
+    grid_mae = float(np.mean([abs(grid_rank[r['Driver']] - r['Actual']) for r in clean])) if clean else None
+    grid_order = [d for d, _ in sorted(grid_rank.items(), key=lambda x: x[1])]
     return {
         'rows': rows, 'clean': clean,
         'mae': float(np.mean([r['Err'] for r in clean])) if clean else None,
+        'grid_mae': grid_mae,
+        'model_edge': (grid_mae - float(np.mean([r['Err'] for r in clean]))) if clean else None,
+        'grid_top5': len(set(grid_order[:5]) & set(actual_order[:5])),
+        'grid_top10': len(set(grid_order[:10]) & set(actual_order[:10])),
         'winner_pred': pred_order[0], 'winner_actual': actual_order[0],
         'winner_hit': pred_order[0] == actual_order[0],
         'podium': len(set(pred_order[:3]) & set(actual_order[:3])),

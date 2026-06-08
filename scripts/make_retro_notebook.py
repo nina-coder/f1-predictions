@@ -103,10 +103,11 @@ for p in preds:
 
 SIM_MD = """## 3. Podium Probabilities (10,000 Simulated Races)
 
-Rather than a single outcome, the model simulates the race 10,000 times with realistic randomness — mechanical failures, a 33% safety-car chance, and grid-dependent chaos (midfield is messier than the front row). The result is a probability for each driver."""
+Rather than a single outcome, the model simulates the race 10,000 times with realistic randomness — and now models **retirements**: each driver can DNF with their season failure rate, which promotes everyone behind them. That matters most at high-attrition tracks, where a front-runner's mechanical failure reshuffles the order. Add a 33% safety-car chance and grid-dependent chaos (the midfield is messier than the front row), and the result is a probability for each driver."""
 
 SIM = """sims = f1lib.simulate(preds, residual_std)
 n = sims['n']
+print(f"  Modeled retirements: {sum(sims['dnf'].values())/n:.1f} per race (driven by each driver's season DNF rate)\\n")
 prob = [{'Driver': p['Driver'], 'Team': p['Team'], 'Grid': p['Grid'],
          'Win': sims['win'][p['Driver']]/n*100, 'Podium': sims['podium'][p['Driver']]/n*100,
          'Top5': sims['top5'][p['Driver']]/n*100, 'Top10': sims['top10'][p['Driver']]/n*100}
@@ -151,13 +152,18 @@ for r in sorted(g['rows'], key=lambda r: (pd.isna(r['Actual']), r['Actual'] if p
     print(f"  {fin}  {r['Driver']:22s}  {r['Team']:18s}  P{r['PredRank']:>2d}  {es:>4s}  {r['Status']} {hit}")
 
 print(f"\\n  \U0001f4ca SCORECARD")
-print('  ' + '-' * 55)
+print('  ' + '-' * 60)
 print(f"  Predicted winner:  {g['winner_pred']}")
 print(f"  Actual winner:     {g['winner_actual']}  {'✅' if g['winner_hit'] else '❌'}")
 print(f"  Podium accuracy:   {g['podium']}/3")
-print(f"  Top 5 accuracy:    {g['top5']}/5")
-print(f"  Top 10 accuracy:   {g['top10']}/10")
+print(f"  Top 5 accuracy:    {g['top5']}/5   (grid baseline: {g['grid_top5']}/5)")
+print(f"  Top 10 accuracy:   {g['top10']}/10  (grid baseline: {g['grid_top10']}/10)")
 print(f"  MAE (classified):  {g['mae']:.2f} positions  (validation expected {loo_mae:.2f})")
+edge = g['model_edge']
+verdict = 'model beats grid' if edge > 0.05 else ('grid beats model' if edge < -0.05 else 'tie')
+print(f"\\n  \U0001f3c1 vs GRID BASELINE (does the model beat 'finish = qualifying order'?)")
+print(f"  Grid-copy MAE:     {g['grid_mae']:.2f} positions")
+print(f"  Model edge:        {edge:+.2f}  ->  {verdict}")
 
 beats = sorted(g['clean'], key=lambda r: r['Err'])[:3]
 misses = sorted(g['clean'], key=lambda r: -r['Err'])[:3]
