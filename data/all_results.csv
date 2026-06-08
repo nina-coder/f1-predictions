@@ -1441,3 +1441,91 @@ DriverNumber,FullName,TeamName,Position,GridPosition,Points,Status,Year,Round,Ra
 30,Liam Lawson,Racing Bulls,18.0,13.0,0.0,Lapped,2025,24,Abu Dhabi Grand Prix,Yas Island
 10,Pierre Gasly,Alpine,19.0,19.0,0.0,Lapped,2025,24,Abu Dhabi Grand Prix,Yas Island
 43,Franco Colapinto,Alpine,20.0,20.0,0.0,Lapped,2025,24,Abu Dhabi Grand Prix,Yas Island
+12,Kimi Antonelli,Mercedes,1.0,1.0,25.0,Finished,2026,3,Japanese Grand Prix,Suzuka
+81,Oscar Piastri,McLaren,2.0,3.0,18.0,Finished,2026,3,Japanese Grand Prix,Suzuka
+16,Charles Leclerc,Ferrari,3.0,4.0,15.0,Finished,2026,3,Japanese Grand Prix,Suzuka
+63,George Russell,Mercedes,4.0,2.0,12.0,Finished,2026,3,Japanese Grand Prix,Suzuka
+1,Lando Norris,McLaren,5.0,5.0,10.0,Finished,2026,3,Japanese Grand Prix,Suzuka
+44,Lewis Hamilton,Ferrari,6.0,6.0,8.0,Finished,2026,3,Japanese Grand Prix,Suzuka
+10,Pierre Gasly,Alpine,7.0,7.0,6.0,Finished,2026,3,Japanese Grand Prix,Suzuka
+3,Max Verstappen,Red Bull Racing,8.0,11.0,4.0,Finished,2026,3,Japanese Grand Prix,Suzuka
+30,Liam Lawson,Racing Bulls,9.0,14.0,2.0,Finished,2026,3,Japanese Grand Prix,Suzuka
+31,Esteban Ocon,Haas F1 Team,10.0,12.0,1.0,Finished,2026,3,Japanese Grand Prix,Suzuka
+27,Nico Hulkenberg,Audi,11.0,13.0,0.0,Finished,2026,3,Japanese Grand Prix,Suzuka
+6,Isack Hadjar,Red Bull Racing,12.0,8.0,0.0,Finished,2026,3,Japanese Grand Prix,Suzuka
+5,Gabriel Bortoleto,Audi,13.0,9.0,0.0,Finished,2026,3,Japanese Grand Prix,Suzuka
+41,Arvid Lindblad,Racing Bulls,14.0,10.0,0.0,Finished,2026,3,Japanese Grand Prix,Suzuka
+55,Carlos Sainz,Williams,15.0,16.0,0.0,Finished,2026,3,Japanese Grand Prix,Suzuka
+43,Franco Colapinto,Alpine,16.0,15.0,0.0,Finished,2026,3,Japanese Grand Prix,Suzuka
+11,Sergio Perez,Cadillac,17.0,19.0,0.0,Finished,2026,3,Japanese Grand Prix,Suzuka
+14,Fernando Alonso,Aston Martin,18.0,21.0,0.0,Lapped,2026,3,Japanese Grand Prix,Suzuka
+77,Valtteri Bottas,Cadillac,19.0,20.0,0.0,Lapped,2026,3,Japanese Grand Prix,Suzuka
+23,Alexander Albon,Williams,20.0,17.0,0.0,Lapped,2026,3,Japanese Grand Prix,Suzuka
+18,Lance Stroll,Aston Martin,21.0,22.0,0.0,Retired,2026,3,Japanese Grand Prix,Suzuka
+87,Oliver Bearman,Haas F1 Team,22.0,18.0,0.0,Retired,2026,3,Japanese Grand Prix,Suzuka
+12,Kimi Antonelli,Mercedes,1.0,1.0,25.0,Finished,2026,4,Miami Grand Prix,Miami Gardens
+1,Lando Norris,McLaren,2.0,4.0,18.0,Finished,2026,4,Miami Grand Prix,Miami Gardens
+81,Oscar Piastri,McLaren,3.0,7.0,15.0,Finished,2026,4,Miami Grand Prix,Miami Gardens
+63,George Russell,Mercedes,4.0,5.0,12.0,Finished,2026,4,Miami Grand Prix,Miami Gardens
+3,Max Verstappen,Red Bull Racing,5.0,2.0,10.0,Finished,2026,4,Miami Grand Prix,Miami Gardens
+44,Lewis Hamilton,Ferrari,6.0,6.0,8.0,Finished,2026,4,Miami Grand Prix,Miami Gardens
+43,Franco Colapinto,Alpine,7.0,8.0,6.0,Finished,2026,4,Miami Grand Prix,Miami Gardens
+16,Charles Leclerc,Ferrari,8.0,3.0,4.0,Finished,2026,4,Miami Grand Prix,Miami Gardens
+55,Carlos Sainz,Williams,9.0,13.0,2.0,Finished,2026,4,Miami Grand Prix,Miami Gardens
+23,Alexander Albon,Williams,10.0,15.0,1.0,Finished,2026,4,Miami Grand Prix,Miami Gardens
+87,Oliver Bearman,Haas F1 Team,11.0,12.0,0.0,Lapped,2026,4,Miami Grand Prix,Miami Gardens
+5,Gabriel Bortoleto,Audi,12.0,21.0,0.0,Lapped,2026,4,Miami Grand Prix,Miami Gardens
+31,Esteban Ocon,Haas F1 Team,13.0,14.0,0.0,Lapped,2026,4,Miami Grand Prix,Miami Gardens
+41,Arvid Lindblad,Racing Bulls,14.0,16.0,0.0,Lapped,2026,4,Miami Grand Prix,Miami Gardens
+14,Fernando Alonso,Aston Martin,15.0,17.0,0.0,Lapped,2026,4,Miami Grand Prix,Miami Gardens
+11,Sergio Perez,Cadillac,16.0,20.0,0.0,Lapped,2026,4,Miami Grand Prix,Miami Gardens
+18,Lance Stroll,Aston Martin,17.0,18.0,0.0,Lapped,2026,4,Miami Grand Prix,Miami Gardens
+77,Valtteri Bottas,Cadillac,18.0,19.0,0.0,Lapped,2026,4,Miami Grand Prix,Miami Gardens
+27,Nico Hulkenberg,Audi,19.0,10.0,0.0,Retired,2026,4,Miami Grand Prix,Miami Gardens
+30,Liam Lawson,Racing Bulls,20.0,11.0,0.0,Retired,2026,4,Miami Grand Prix,Miami Gardens
+10,Pierre Gasly,Alpine,21.0,9.0,0.0,Retired,2026,4,Miami Grand Prix,Miami Gardens
+6,Isack Hadjar,Red Bull Racing,22.0,22.0,0.0,Retired,2026,4,Miami Grand Prix,Miami Gardens
+12,Kimi Antonelli,Mercedes,1.0,2.0,25.0,Finished,2026,5,Canadian Grand Prix,Montréal
+44,Lewis Hamilton,Ferrari,2.0,5.0,18.0,Finished,2026,5,Canadian Grand Prix,Montréal
+3,Max Verstappen,Red Bull Racing,3.0,6.0,15.0,Finished,2026,5,Canadian Grand Prix,Montréal
+16,Charles Leclerc,Ferrari,4.0,8.0,12.0,Finished,2026,5,Canadian Grand Prix,Montréal
+6,Isack Hadjar,Red Bull Racing,5.0,7.0,10.0,Lapped,2026,5,Canadian Grand Prix,Montréal
+43,Franco Colapinto,Alpine,6.0,10.0,8.0,Lapped,2026,5,Canadian Grand Prix,Montréal
+30,Liam Lawson,Racing Bulls,7.0,12.0,6.0,Lapped,2026,5,Canadian Grand Prix,Montréal
+10,Pierre Gasly,Alpine,8.0,14.0,4.0,Lapped,2026,5,Canadian Grand Prix,Montréal
+55,Carlos Sainz,Williams,9.0,15.0,2.0,Lapped,2026,5,Canadian Grand Prix,Montréal
+87,Oliver Bearman,Haas F1 Team,10.0,16.0,1.0,Lapped,2026,5,Canadian Grand Prix,Montréal
+81,Oscar Piastri,McLaren,11.0,4.0,0.0,Lapped,2026,5,Canadian Grand Prix,Montréal
+27,Nico Hulkenberg,Audi,12.0,11.0,0.0,Lapped,2026,5,Canadian Grand Prix,Montréal
+5,Gabriel Bortoleto,Audi,13.0,13.0,0.0,Lapped,2026,5,Canadian Grand Prix,Montréal
+31,Esteban Ocon,Haas F1 Team,14.0,17.0,0.0,Lapped,2026,5,Canadian Grand Prix,Montréal
+18,Lance Stroll,Aston Martin,15.0,22.0,0.0,Lapped,2026,5,Canadian Grand Prix,Montréal
+77,Valtteri Bottas,Cadillac,16.0,21.0,0.0,Lapped,2026,5,Canadian Grand Prix,Montréal
+11,Sergio Perez,Cadillac,17.0,20.0,0.0,Retired,2026,5,Canadian Grand Prix,Montréal
+1,Lando Norris,McLaren,18.0,3.0,0.0,Retired,2026,5,Canadian Grand Prix,Montréal
+63,George Russell,Mercedes,19.0,1.0,0.0,Retired,2026,5,Canadian Grand Prix,Montréal
+14,Fernando Alonso,Aston Martin,20.0,19.0,0.0,Retired,2026,5,Canadian Grand Prix,Montréal
+23,Alexander Albon,Williams,21.0,18.0,0.0,Retired,2026,5,Canadian Grand Prix,Montréal
+41,Arvid Lindblad,Racing Bulls,22.0,9.0,0.0,Did not start,2026,5,Canadian Grand Prix,Montréal
+12,Kimi Antonelli,Mercedes,1.0,1.0,25.0,Finished,2026,6,Monaco Grand Prix,Monte Carlo
+44,Lewis Hamilton,Ferrari,2.0,3.0,18.0,Finished,2026,6,Monaco Grand Prix,Monte Carlo
+6,Isack Hadjar,Red Bull Racing,3.0,5.0,15.0,Finished,2026,6,Monaco Grand Prix,Monte Carlo
+81,Oscar Piastri,McLaren,4.0,7.0,12.0,Finished,2026,6,Monaco Grand Prix,Monte Carlo
+30,Liam Lawson,Racing Bulls,5.0,10.0,10.0,Finished,2026,6,Monaco Grand Prix,Monte Carlo
+41,Arvid Lindblad,Racing Bulls,6.0,15.0,8.0,Finished,2026,6,Monaco Grand Prix,Monte Carlo
+10,Pierre Gasly,Alpine,7.0,9.0,6.0,Finished,2026,6,Monaco Grand Prix,Monte Carlo
+23,Alexander Albon,Williams,8.0,11.0,4.0,Finished,2026,6,Monaco Grand Prix,Monte Carlo
+31,Esteban Ocon,Haas F1 Team,9.0,17.0,2.0,Finished,2026,6,Monaco Grand Prix,Monte Carlo
+14,Fernando Alonso,Aston Martin,10.0,21.0,1.0,Finished,2026,6,Monaco Grand Prix,Monte Carlo
+5,Gabriel Bortoleto,Audi,11.0,16.0,0.0,Finished,2026,6,Monaco Grand Prix,Monte Carlo
+63,George Russell,Mercedes,12.0,6.0,0.0,Finished,2026,6,Monaco Grand Prix,Monte Carlo
+27,Nico Hulkenberg,Audi,13.0,13.0,0.0,Finished,2026,6,Monaco Grand Prix,Monte Carlo
+43,Franco Colapinto,Alpine,14.0,14.0,0.0,Finished,2026,6,Monaco Grand Prix,Monte Carlo
+11,Sergio Perez,Cadillac,15.0,18.0,0.0,Finished,2026,6,Monaco Grand Prix,Monte Carlo
+55,Carlos Sainz,Williams,16.0,12.0,0.0,Retired,2026,6,Monaco Grand Prix,Monte Carlo
+16,Charles Leclerc,Ferrari,17.0,4.0,0.0,Retired,2026,6,Monaco Grand Prix,Monte Carlo
+18,Lance Stroll,Aston Martin,18.0,22.0,0.0,Retired,2026,6,Monaco Grand Prix,Monte Carlo
+1,Lando Norris,McLaren,19.0,8.0,0.0,Retired,2026,6,Monaco Grand Prix,Monte Carlo
+87,Oliver Bearman,Haas F1 Team,20.0,19.0,0.0,Retired,2026,6,Monaco Grand Prix,Monte Carlo
+77,Valtteri Bottas,Cadillac,21.0,20.0,0.0,Retired,2026,6,Monaco Grand Prix,Monte Carlo
+3,Max Verstappen,Red Bull Racing,22.0,2.0,0.0,Retired,2026,6,Monaco Grand Prix,Monte Carlo

@@ -27,9 +27,16 @@ Leave-one-out validation: **MAE 2.39 positions**.
 
 ## 2026 Season Results
 
-| Rnd | Race | Predicted P1 | Actual P1 | Top 5 Acc | Top 10 Acc | Predictions |
-|-----|------|-------------|-----------|-----------|------------|-------------|
-| R03 | Japan | Russell | — | — | — | [pre-race](https://nina-coder.github.io/f1-predictions/r03-japan/) |
+Predicted winner from the post-qualifying model vs. the actual result. The model has called the winner in **4 of 4** races so far — though accuracy on the full order falls off at the low-overtaking circuits (Canada, Monaco), exactly where grid position locks in the result and strategy creates the upsets.
+
+| Rnd | Race | Predicted P1 | Actual P1 | Winner | Top 5 Acc | Top 10 Acc | MAE | Predictions |
+|-----|------|-------------|-----------|:------:|-----------|------------|-----|-------------|
+| R03 | Japan | Antonelli | Antonelli | ✅ | 4/5 | 8/10 | 1.90 | [page](https://nina-coder.github.io/f1-predictions/r03-japan/) |
+| R04 | Miami | Antonelli | Antonelli | ✅ | 4/5 | 7/10 | 3.00 | [page](https://nina-coder.github.io/f1-predictions/r04-miami/) |
+| R05 | Canada | Antonelli | Antonelli | ✅ | 2/5 | 6/10 | 3.88 | [page](https://nina-coder.github.io/f1-predictions/r05-canada/) |
+| R06 | Monaco | Antonelli | Antonelli | ✅ | 2/5 | 6/10 | 4.13 | [page](https://nina-coder.github.io/f1-predictions/r06-monaco/) |
+
+*Rounds 1-2 (Australia, China) predate the model. Bahrain and Saudi Arabia were cancelled. R03 was a live pre-race prediction; R04-R06 are retrospectives reconstructed from each weekend's qualifying — no race data enters the model, so the accuracy check is fair.*
 
 ## Model Evolution
 
@@ -62,6 +69,8 @@ jupyter lab notebooks/
 - [x] Practice + qualifying live integration
 - [x] F1 Fantasy optimization with actual prices
 - [x] Season results scoreboard + per-race archive pages
-- [ ] Post-race accuracy analysis + model update
+- [x] Post-race accuracy analysis (Rounds 3-6)
+- [x] Reusable prediction library (`scripts/f1lib.py`) + one-command notebook generator
 - [ ] Overtake probability modeling
 - [ ] Enhanced safety car pit window timing
+- [ ] Track-difficulty weighting (Monaco/Canada accuracy is the weak spot)

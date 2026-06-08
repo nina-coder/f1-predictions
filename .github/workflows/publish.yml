@@ -23,10 +23,12 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt nbconvert
 
-      - name: Find most recently modified notebook
+      - name: Find latest-round notebook
         id: notebook
         run: |
-          NOTEBOOK=$(ls -t notebooks/*.ipynb | head -1)
+          # Filenames are 2026-RNN-track.ipynb, so lexicographic order = round order.
+          # (mtime is not preserved by checkout, so ls -t is unreliable here.)
+          NOTEBOOK=$(ls notebooks/*.ipynb | sort | tail -1)
           echo "path=$NOTEBOOK" >> "$GITHUB_OUTPUT"
           echo "Using notebook: $NOTEBOOK"
 
