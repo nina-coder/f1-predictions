@@ -388,14 +388,14 @@ def weekend_preq(year, event, df, season_speed, sec_deltas, forecast=None):
     else:
         weights, stage = {'season': 0.2, 0: 0.2, 1: 0.3, 2: 0.3}, 'post-FP3'
     # practice may carry the freshest team map (driver swaps)
-    for _, (_, tmap) in zip(range(len(practice)), practice):
+    for _, (_, tmap) in practice:
         team_map.update({d: t for d, t in tmap.items() if d in team_map})
 
     teams = set(season_pace_dict) | {team_map[d] for d in drivers if d in team_map}
     car_pace = {}
     for t in teams:
         val = weights['season'] * season_pace_dict.get(t, 15)
-        for i, (_, tpos) in enumerate(practice):
+        for i, (_, (tpos, _)) in enumerate(practice):
             val += weights[i] * tpos.get(t, season_pace_dict.get(t, 15))
         car_pace[t] = val
     car_speed = {t: season_spd_dict.get(t, 290) for t in teams}
