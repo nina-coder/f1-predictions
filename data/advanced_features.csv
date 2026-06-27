@@ -370,23 +370,45 @@ Year,Round,RaceName,FullName,Team,first_lap_gain,tire_degradation,quali_race_gap
 2026,5,Canadian Grand Prix,Arvid Lindblad,Racing Bulls,,,-13.0,True,9.0,22.0
 2026,6,Monaco Grand Prix,Kimi Antonelli,Mercedes,0.0,-0.5285507894066747,0.0,True,1.0,1.0
 2026,6,Monaco Grand Prix,Lewis Hamilton,Ferrari,1.0,1.2542990983945,1.0,True,3.0,2.0
-2026,6,Monaco Grand Prix,Isack Hadjar,Red Bull Racing,1.0,-0.11930541460393547,2.0,True,5.0,3.0
+2026,6,Monaco Grand Prix,Isack Hadjar,Red Bull Racing,1.0,-0.1193054146039354,2.0,True,5.0,3.0
 2026,6,Monaco Grand Prix,Oscar Piastri,McLaren,1.0,-0.684979733271663,3.0,True,7.0,4.0
-2026,6,Monaco Grand Prix,Liam Lawson,Racing Bulls,1.0,-0.16804457935711548,5.0,True,10.0,5.0
+2026,6,Monaco Grand Prix,Liam Lawson,Racing Bulls,1.0,-0.1680445793571154,5.0,True,10.0,5.0
 2026,6,Monaco Grand Prix,Arvid Lindblad,Racing Bulls,0.0,-0.2686808783321948,9.0,True,15.0,6.0
 2026,6,Monaco Grand Prix,Pierre Gasly,Alpine,2.0,-0.8548531758938751,2.0,True,9.0,7.0
-2026,6,Monaco Grand Prix,Alexander Albon,Williams,1.0,-0.20505752255874388,3.0,True,11.0,8.0
-2026,6,Monaco Grand Prix,Esteban Ocon,Haas F1 Team,1.0,-1.1854462331741193,8.0,True,17.0,9.0
+2026,6,Monaco Grand Prix,Alexander Albon,Williams,1.0,-0.2050575225587438,3.0,True,11.0,8.0
+2026,6,Monaco Grand Prix,Esteban Ocon,Haas F1 Team,1.0,-1.1854462331741191,8.0,True,17.0,9.0
 2026,6,Monaco Grand Prix,Fernando Alonso,Aston Martin,4.0,-1.1512588168295712,11.0,True,21.0,10.0
-2026,6,Monaco Grand Prix,Gabriel Bortoleto,Audi,-4.0,-0.10892201868842723,5.0,True,16.0,11.0
-2026,6,Monaco Grand Prix,George Russell,Mercedes,1.0,-0.09025349108107909,-6.0,True,6.0,12.0
-2026,6,Monaco Grand Prix,Nico Hulkenberg,Audi,1.0,-1.0729738589309241,0.0,True,13.0,13.0
+2026,6,Monaco Grand Prix,Gabriel Bortoleto,Audi,-4.0,-0.1089220186884272,5.0,True,16.0,11.0
+2026,6,Monaco Grand Prix,George Russell,Mercedes,1.0,-0.090253491081079,-6.0,True,6.0,12.0
+2026,6,Monaco Grand Prix,Nico Hulkenberg,Audi,1.0,-1.072973858930924,0.0,True,13.0,13.0
 2026,6,Monaco Grand Prix,Franco Colapinto,Alpine,1.0,-0.8634639450543063,0.0,True,14.0,14.0
-2026,6,Monaco Grand Prix,Sergio Perez,Cadillac,4.0,-1.0559025428788527,3.0,True,18.0,15.0
-2026,6,Monaco Grand Prix,Carlos Sainz,Williams,1.0,-0.34560244897959413,-4.0,True,12.0,16.0
-2026,6,Monaco Grand Prix,Charles Leclerc,Ferrari,1.0,-0.02052300337131005,-13.0,True,4.0,17.0
-2026,6,Monaco Grand Prix,Lance Stroll,Aston Martin,4.0,0.011870269506342516,4.0,True,22.0,18.0
-2026,6,Monaco Grand Prix,Lando Norris,McLaren,0.0,0.005170407584474102,-11.0,True,8.0,19.0
+2026,6,Monaco Grand Prix,Sergio Perez,Cadillac,4.0,-1.0559025428788529,3.0,True,18.0,15.0
+2026,6,Monaco Grand Prix,Carlos Sainz,Williams,1.0,-0.3456024489795941,-4.0,True,12.0,16.0
+2026,6,Monaco Grand Prix,Charles Leclerc,Ferrari,1.0,-0.02052300337131,-13.0,True,4.0,17.0
+2026,6,Monaco Grand Prix,Lance Stroll,Aston Martin,4.0,0.0118702695063425,4.0,True,22.0,18.0
+2026,6,Monaco Grand Prix,Lando Norris,McLaren,0.0,0.0051704075844741,-11.0,True,8.0,19.0
 2026,6,Monaco Grand Prix,Oliver Bearman,Haas F1 Team,-2.0,-0.15225641025641,-1.0,True,19.0,20.0
-2026,6,Monaco Grand Prix,Valtteri Bottas,Cadillac,1.0,-0.06945494505494375,-1.0,True,20.0,21.0
+2026,6,Monaco Grand Prix,Valtteri Bottas,Cadillac,1.0,-0.0694549450549437,-1.0,True,20.0,21.0
 2026,6,Monaco Grand Prix,Max Verstappen,Red Bull Racing,,,-20.0,True,2.0,22.0
+2026,7,Barcelona Grand Prix,Lewis Hamilton,Ferrari,0.0,0.07659451659924349,1.0,True,2.0,1.0
+2026,7,Barcelona Grand Prix,George Russell,Mercedes,0.0,0.08894348026513565,-1.0,True,1.0,2.0
+2026,7,Barcelona Grand Prix,Lando Norris,McLaren,0.0,0.030762490798503035,1.0,True,4.0,3.0
+2026,7,Barcelona Grand Prix,Max Verstappen,Red Bull Racing,0.0,0.12483545084536056,1.0,True,5.0,4.0
+2026,7,Barcelona Grand Prix,Oscar Piastri,McLaren,1.0,0.11212545561900823,2.0,True,7.0,5.0
+2026,7,Barcelona Grand Prix,Isack Hadjar,Red Bull Racing,-8.0,0.10292870426928752,0.0,True,6.0,6.0
+2026,7,Barcelona Grand Prix,Pierre Gasly,Alpine,2.0,0.15418795364690532,7.0,True,14.0,7.0
+2026,7,Barcelona Grand Prix,Liam Lawson,Racing Bulls,0.0,0.1425973955556312,0.0,True,8.0,8.0
+2026,7,Barcelona Grand Prix,Arvid Lindblad,Racing Bulls,2.0,0.07656526701163081,2.0,True,11.0,9.0
+2026,7,Barcelona Grand Prix,Franco Colapinto,Alpine,2.0,0.15161887716450123,3.0,True,13.0,10.0
+2026,7,Barcelona Grand Prix,Gabriel Bortoleto,Audi,-5.0,0.15400647693957964,1.0,True,12.0,11.0
+2026,7,Barcelona Grand Prix,Carlos Sainz,Williams,3.0,0.16116141941932047,4.0,True,16.0,12.0
+2026,7,Barcelona Grand Prix,Esteban Ocon,Haas F1 Team,1.0,-0.8219526829550756,4.0,True,17.0,13.0
+2026,7,Barcelona Grand Prix,Sergio Perez,Cadillac,0.0,0.17592829019610404,5.0,True,19.0,14.0
+2026,7,Barcelona Grand Prix,Charles Leclerc,Ferrari,3.0,0.10480279545016442,-5.0,True,10.0,15.0
+2026,7,Barcelona Grand Prix,Kimi Antonelli,Mercedes,0.0,0.07864123920363482,-13.0,True,3.0,16.0
+2026,7,Barcelona Grand Prix,Oliver Bearman,Haas F1 Team,0.0,0.11246480048159672,-2.0,True,15.0,17.0
+2026,7,Barcelona Grand Prix,Alexander Albon,Williams,0.0,-1.5692366633366641,0.0,True,18.0,18.0
+2026,7,Barcelona Grand Prix,Fernando Alonso,Aston Martin,0.0,0.08048110902255651,3.0,True,22.0,19.0
+2026,7,Barcelona Grand Prix,Nico Hulkenberg,Audi,-1.0,0.12562832167832022,-11.0,True,9.0,20.0
+2026,7,Barcelona Grand Prix,Valtteri Bottas,Cadillac,0.0,0.28845104895104673,-1.0,True,20.0,21.0
+2026,7,Barcelona Grand Prix,Lance Stroll,Aston Martin,0.0,,-1.0,True,21.0,22.0
