@@ -46,6 +46,7 @@ CIRCUIT_COORDS = {
     'Canada': (45.500, -73.522, 'America/Toronto'),
     'Monaco': (43.735, 7.421, 'Europe/Monaco'),
     'Barcelona': (41.570, 2.261, 'Europe/Madrid'),
+    'Austria': (47.220, 14.765, 'Europe/Vienna'),
 }
 
 
